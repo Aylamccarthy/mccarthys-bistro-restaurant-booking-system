@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def bookingsytem_list(request):
-    return render(request, 'bookingsystem/bookingsytem_list.html')
+def bookingsystem_list(request):
+    return render(request, 'bookingsystem/bookingsystem_list.html')
