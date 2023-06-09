@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu99.gitpod.io's, 'localhost']
+ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu99.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'bookingsystem',
+    
 ]
 
 MIDDLEWARE = [

@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def bookingsytem_list(request):
+    return render(request, 'bookingsystem/bookingsytem_list.html')
