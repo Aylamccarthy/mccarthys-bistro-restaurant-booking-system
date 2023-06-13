@@ -1,18 +1,21 @@
 ---
 name: User Story
-about: This is our default  user story template
+about: Default User Story Template
 title: 'USER STORY: <TITLE>'
 labels: ''
-assignees: ''
+assignees: Aylamccarthy
 
 ---
 
-As a  **role**   I can  **capability**  so that  **received benefit**
+# User story: 
+As **role**, I can **goal_desire** so that **receive_benefit**
 
-### Acceptance Criteria
-- [ ]
-- [ ]
+# Acceptance criteria:
+- [ ] Acceptance Criteria 1
+- [ ] Acceptance Criteria 1
+- [ ] Acceptance Criteria 1
 
-### Tasks
-- [ ]
-- [ ]
+# Tasks
+- [ ] Task 1
+- [ ] Task 2
+- [ ] Task 3
