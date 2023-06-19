@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu99.gitpod.io', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu100.gitpod.io']
 
