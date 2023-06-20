@@ -10,3 +10,12 @@ body {
     background-color: bisque;
    
 }
+
+/* ----------------------HOME PAGE COVER----------------------------- */
+
+#home-background-container {
+    height: 100vh;
+    background-image: url(https://res.cloudinary.com/aylamccarthy/image/upload/v1686866170/davey-gravy-DmO662qvWO8-unsplash_gylsej.jpg);
+
+
+}
