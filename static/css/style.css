@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    /** Fonts **/
+    --title: 'Merriweather', serif;
+    --main-font: 'Roboto', serif;
+
+    /** Colours**/
+    --background: #ffe4c4;
+    --orange: #e28306;
+    --gray:#393833;
+    --green:#3f4a10;
+    --black: #000;
+}
 
 body {
     font-family: 'Merriweather', serif;
-    background-color: bisque;
+    background-color: #ffe4c4;
    
 }
 
