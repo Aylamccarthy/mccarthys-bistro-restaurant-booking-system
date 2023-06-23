@@ -10,24 +10,64 @@
     --main-font: 'Roboto', serif;
 
     /** Colours**/
-    --background: #ffe4c4;
+    --background: #f7f2ef;
     --orange: #e28306;
     --gray:#393833;
     --green:#3f4a10;
     --black: #000;
+    --white: #ffffff;
+
+
+    /** Utils **/
+    --small-box-shadow: 1px -1px 7px 0 #00000061;
+    --border: 1px solid #00000030;
+}
+
+/* Header */
+.navbar {
+    box-shadow: var(--small-box-shadow);
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Merriweather', serif;
-    background-color: #ffe4c4;
-   
+    background-color: var(--background)  
 }
 
-/* ----------------------HOME PAGE COVER----------------------------- */
-
-#home-background-container {
-    height: 100vh;
-    background-image: url(https://res.cloudinary.com/aylamccarthy/image/upload/v1686866170/davey-gravy-DmO662qvWO8-unsplash_gylsej.jpg);
-
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
 }
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--white);
+}
+
+/* Footer */
+.footer {
+    z-index: 1;
+    background-color: antiquewhite;
+    color: #3a3a3a;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+footer a {
+    color: #3a3a3a;
+}
+
+footer a:hover {
+    color: #3a3a3a;
+}
+
+footer i:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #3a3a3a;
+}
+
+
