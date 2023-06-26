@@ -48,6 +48,21 @@ main {
     background-color: var(--white);
 }
 
+.active {
+    border-bottom: 2px solid var(--orange);
+    font-weight: 500;
+}
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+
+
+}
+
+
 /* Footer */
 .footer {
     z-index: 1;
