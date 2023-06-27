@@ -29,6 +29,21 @@
     box-shadow: var(--small-box-shadow);
 }
 
+/* ----------------------HOME PAGE COVER----------------------------- */
+#home-background-container {
+    height: 93vh;
+    background-image: url('https://res.cloudinary.com/aylamccarthy/image/upload/v1687872744/fettuccine-with-tomato-sauce-minced-meat-garnished-with-grated-parmesan_1_xklxa6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    position: relative;
+}
+
 html, body {
     height: 100%;
 }
@@ -55,8 +70,7 @@ main {
 }
 
 .form {
-    width: 5
-    0%;
+    width: 50%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
@@ -72,7 +86,7 @@ main {
 }
 
 footer a {
-    color: #3a3a3a;
+    color: var(--green);
 }
 
 footer a:hover {
