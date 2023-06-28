@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # Cross-reference this debug state to set development state
 # development = DEBUG
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu101.gitpod.io']
 
@@ -193,3 +193,18 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+}
