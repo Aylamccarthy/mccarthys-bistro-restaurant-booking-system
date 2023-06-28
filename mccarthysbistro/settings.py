@@ -29,11 +29,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Set false by default, unless we have it set True in local env.py
-DEBUG = os.environ.get('DEBUG', False)
+# DEBUG = os.environ.get('DEBUG', False)
 # Cross-reference this debug state to set development state
-development = DEBUG
+# development = DEBUG
 
-ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu99.gitpod.io', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu100.gitpod.io']
+DEBUG = True
+
+ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu101.gitpod.io']
 
 
 # Application definition
