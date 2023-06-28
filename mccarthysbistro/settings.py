@@ -194,6 +194,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# This code will log the issue to the console (kind of like DEBUG = TRUE does,
+# but without us having to set it)
 
 LOGGING = {
     "version": 1,
