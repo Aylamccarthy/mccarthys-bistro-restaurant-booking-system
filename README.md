@@ -95,5 +95,6 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 
 
 ## Credits
+- <a href="https://www.freepik.com/free-photo/table-set-dinning-table_1241148.htm#query=bistro%20restaurant&position=7&from_view=keyword&track=ais">Image by topntp26</a> on Freepik
 ### Code
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
