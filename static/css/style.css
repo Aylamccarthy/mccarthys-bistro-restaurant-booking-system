@@ -150,6 +150,15 @@ main {
     left: 100%;
 }
 
+/* ----------------------LOGIN/REGISTER PAGES ILUSTRATION----------------------------- */
+.ilustrate-logo {
+    height: 55vh;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /* -------Footer-------- */
 .footer {
