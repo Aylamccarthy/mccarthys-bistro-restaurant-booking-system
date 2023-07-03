@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'reviews',
+    'users',
     
 
     # Others
