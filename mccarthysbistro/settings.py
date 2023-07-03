@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'reviews',
     'users',
     
-
     # Others
     'crispy_forms',
     'crispy_bootstrap5',
@@ -72,6 +71,17 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+AUTH_USER_MODEL = 'users.User'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
+ACCOUNT_FORMS = {
+    'signup': 'mccarthysbistro.forms.CustomSignupForm'
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
