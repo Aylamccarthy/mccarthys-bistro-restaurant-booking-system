@@ -24,5 +24,5 @@ urlpatterns = [
     path("bookings/", include("bookings.urls"), name="bookings-urls"),
     path('accounts/signup/', signup, name='account_signup'),
     path('accounts/login/', login, name='account_login'),
-    path('accounts/logout/', logout, name='account_logout')
+    path('accounts/logout/', logout, name='account_logout'),
 ]
