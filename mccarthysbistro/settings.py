@@ -70,18 +70,6 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-AUTH_USER_MODEL = 'users.User'
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
-ACCOUNT_FORMS = {
-    'signup': 'mccarthysbistro.forms.CustomSignupForm'
-}
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -182,13 +170,16 @@ USE_TZ = True
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/'
-
+# LOGIN_URL = '/accounts/login'
+# LOGIN_REDIRECT_URL = '/'
+ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
+ACCOUNT_FORMS = {
+    'signup': 'mccarthysbistro.forms.CustomSignupForm'
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
