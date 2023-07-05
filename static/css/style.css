@@ -121,6 +121,46 @@ main {
     }
 }
 
+
+/* ----------------------BOOKINGS PAGE------------------------------*/
+.p-center{
+    margin: 0 auto;
+}
+
+.btn{
+    letter-spacing: 1.5px;
+
+}
+.btn:hover{
+    color: black;
+}
+
+.form-control {
+    border: 2px solid #c2c4c6;
+    padding: 1px 2px;
+
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}
+
+.form-control input:hover{
+    cursor: pointer;
+}
+
+.form-control:focus{
+
+    border: 2px solid #c2c4c6;
+    box-shadow: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+
+input[type="number" i] {
+    padding: 0px;
+}
+
+
 /* ----------------------TEXT DECORATION----------------------------- */
 .decorated {
     overflow: hidden;
