@@ -61,6 +61,10 @@ main {
 
 }
 
+.background-container{
+    min-height: 90vh;
+}
+
 /* ----------------------------NAVIGATION BAR-------------------------*/
 .navbar {
     box-shadow: var(--small-box-shadow);
@@ -198,6 +202,25 @@ input[type="number" i] {
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* ----------------------LOGIN/REGISTER FORM----------------------------- */
+
+.auth-form {
+    text-align: center;
+    background-color: #140c08b0;
+    padding: 50px 20px;
+    color: antiquewhite;
+
+    box-shadow: #ffffff 0px 0px 0px 2px,
+        rgb(70 42 28) 0px 0px 0px 6px,
+        #482b1d 0px 0px 0px 9px,
+        rgb(70 42 29) 0px 0px 0px 12px,
+        #ffffff 0px 0px 0px 14px;
+
+    position: relative;
+    left: 15%;
+}
+
 
 
 /* -------Footer-------- */
