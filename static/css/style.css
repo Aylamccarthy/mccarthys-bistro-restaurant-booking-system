@@ -68,6 +68,7 @@ main {
 /* ----------------------------NAVIGATION BAR-------------------------*/
 .navbar {
     box-shadow: var(--small-box-shadow);
+    
 }
 .logo {
     font-family: 'Merriweather', serif;
