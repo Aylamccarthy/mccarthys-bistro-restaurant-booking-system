@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from .forms import newBookingForm
 from django.shortcuts import render
-from .models import Booking 
+from .models import Booking
 from django.views.generic.edit import FormView
 
 
