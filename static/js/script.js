@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       const datePicker = document.querySelector("#datePicker");
       const startTime = document.querySelector("#startTime");
       const endTime = document.querySelector("#endTime");
+      const customer_name = document.querySelector("#fullName");
+      const customer_email = document.querySelector("#email");
+      const book_auth = document.querySelector("#bookAuthenticate");
       const personsNumber = document.querySelector("#persons");
       const additionButton = document.getElementsByClassName("number-input")[0].getElementsByTagName("button")[0];
       const substractionButton = document.getElementsByClassName("number-input")[0].getElementsByTagName("button")[1];
