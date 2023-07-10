@@ -10,5 +10,5 @@ class Booking(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(Booking, self).get_context_data(*args, **kwargs)
-        context['form'] = newBookingForm()
+        context["form"] = newBookingForm()
         return context

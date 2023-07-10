@@ -69,6 +69,10 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+# Page can only be displayed within an iframe on its own domain
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 

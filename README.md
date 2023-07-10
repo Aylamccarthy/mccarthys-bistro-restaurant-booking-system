@@ -97,6 +97,11 @@ This site was created respecting the Five Planes Of Website Design:<br>
 
 
 
+**Project Goal:**<br>
+To create a website for McCarthy's Bistro restaurant that will be beneficial for both clients and staff members which aims to maximise clients/customers experience and ultimately maximising the restaurant's revenue.
+
+
+
 
 
 
