@@ -16,29 +16,34 @@ class Booking(TemplateView):
         return context
 
     def post(self, request):
-
-        if request.method=='POST':
+        if request.method == "POST":
             booking_form = newBookingForm(data=request.POST)
-            booking_form.fields['book_on_user'].required = False
+            booking_form.fields["book_on_user"].required = False
             if booking_form.is_valid():
-                if ( booking_form.cleaned_data['book_on_user']):
-
+                if booking_form.cleaned_data["book_on_user"]:
                     booking_form.instance.customer_email = request.user.email
 
-                    if (request.user.admin == "TRUE"):
+                    if request.user.admin == "TRUE":
                         booking_form.instance.customer_full_name = "admin"
                     else:
-                        booking_form.instance.customer_full_name = request.user.first_name + " " + request.user.last_name
+                        booking_form.instance.customer_full_name = (
+                            request.user.first_name + " " + request.user.last_name
+                        )
 
                 booking = booking_form.save(commit=False)
                 booking.save()
-                messages.success(request, 'Your booking was successfully registered')
-                return HttpResponseRedirect('/bookings/createbookings') 
+                messages.success(request, "Your booking was successfully registered")
+                return HttpResponseRedirect("/bookings/createbookings")
 
             else:
-                return HttpResponse(booking_form.errors.as_json()) 
+                return HttpResponse(booking_form.errors.as_json())
         else:
-                booking_form = newBookingForm()            
+            booking_form = newBookingForm()
 
-        return render(request, 'bookings.html', {'booking_form': booking_form,})
-
+        return render(
+            request,
+            "bookings.html",
+            {
+                "booking_form": booking_form,
+            },
+        )
