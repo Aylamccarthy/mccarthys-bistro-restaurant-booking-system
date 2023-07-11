@@ -81,7 +81,7 @@ class newBookingForm(forms.ModelForm):
                 del self.errors["customer_email"]
             return self.cleaned_data
 
-        class Meta:
-            # specify model to be used
-            model = Booking
-            fields = "__all__"
+    class Meta:
+        # specify model to be used
+        model = Booking
+        fields = "__all__"
