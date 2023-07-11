@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from operator import truediv
 
 
 class Table(models.Model):
@@ -15,9 +16,9 @@ class Booking(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
-    table = models.ForeignKey(Table, on_delete=models.CASCADE, null=True)
-    customer_full_name = models.CharField(max_length=200)
-    customer_email = models.EmailField(max_length=200)
+    # table = models.ForeignKey(Table, on_delete=models.CASCADE, null = True)
+    customer_full_name = models.CharField(max_length=200, blank=True)
+    customer_email = models.EmailField(max_length=200, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

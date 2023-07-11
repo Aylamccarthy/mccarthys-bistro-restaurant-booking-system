@@ -65,6 +65,23 @@ main {
     min-height: 90vh;
 }
 
+.h-100vh {
+    height: 100vh;
+}
+
+.h-80vh {
+    height: 80vh;
+}
+
+.min-h-100 {
+    min-height: 100vh;
+}
+
+.scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 /* ----------------------------NAVIGATION BAR-------------------------*/
 .navbar {
     box-shadow: var(--small-box-shadow);
