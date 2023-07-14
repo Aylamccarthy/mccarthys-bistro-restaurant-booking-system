@@ -361,15 +361,6 @@ input[type=checkbox]:hover {
     left: 100%;
 }
 
-/* ----------------------LOGIN/REGISTER PAGES ILUSTRATION----------------------------- */
-.ilustrate-logo {
-    height: 55vh;
-    position: absolute;
-    left: 55%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 /* ----------------------LOGIN/REGISTER FORM----------------------------- */
 
 .auth-form {
@@ -384,10 +375,13 @@ input[type=checkbox]:hover {
         rgb(70 42 29) 0px 0px 0px 12px,
         #ffffff 0px 0px 0px 14px;
 
-    position: relative;
-    left: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
 }
-/*-----LOGOUT MODAL-----*/
+/*-----------LOGOUT MODAL---------------*/
 
 .modal {
     background-color: #00000052;
@@ -440,7 +434,7 @@ input[type=checkbox]:hover {
     padding: 80px 0px;
 }
 
-/* -------Footer-------- */
+/* -------------Footer---------------- */
 footer{
     flex-shrink: 0;
 }
@@ -515,14 +509,6 @@ footer i:hover {
         min-height: 87vh;
     }
 
-    /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
-    .auth-form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%, -50%);
-        width: 80%;
-    }
 
     .form-submit:hover {
         background-color: antiquewhite;
@@ -578,7 +564,7 @@ footer i:hover {
         width: 100%;
     }
     .background-container {
-        padding: 40px 0px;
+        padding: 20px 0px;
     }
     .auth-form {
         left: 50%;
