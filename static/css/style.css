@@ -517,8 +517,10 @@ footer i:hover {
 
     /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
     .auth-form {
+        position: absolute;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%, -50%);
         width: 80%;
     }
 
