@@ -3,71 +3,47 @@
 {% block content%}
 
 <div id="home-background-container">
-    <div class="wrapper col-8 col-md-6 col-lg-4 flex f-column" >
-        <div class="row">
-            <div id="fade-container">
-                <div class="row">
-                    <h2 class="logo">Welcome to McCarthy's Bistro</h2>
-                    <p>Unforgettable Dining, Memorable Moments</p>      
-               </div>
-        <div>
-            <p class="decorated"><span>Since 2003</span></p>
+    <div class="wrapper col-8 col-md-6 col-lg-4 flex f-column">
+      <!-- Cover-->
+      <div class="row">
+        <div id="fade-container">
+          <div class="row">
+            <!-- Logo title -->
+            <div><h1 class="logo">McCarthy's Bistro</h1></div>
+            <div>
+              <p class="decorated"><span>Since 2003</span></p>
+            </div>
+          </div>
+          <!-- Slogan -->
+          <div class="row">
+            <div class="col">
+              <h3 class="slogan">Unforgettable Dining, Memorable Moments</h3>
+            </div>
+          </div>
         </div>
+        {% if user.is_authenticated %}
+        <!-- Link to booking page -->
+          <div class="col align-self-center">
+            <div class="book-btn"><a href="{% url 'bookings' %}">Book a table</a></div>
+            
+        </div> 
+        {% else %}
+        <!-- Links to Login/Register page -->
+        <div class="col bck-login">
+          <p>
+            To enjoy all the features please <span><a class="authenticate-link" href="{% url 'account_login' %}"><b>LOGIN</b></a> / <a  class="authenticate-link" href="{% url 'account_signup' %}"><b>REGISTER</b></a></span>
+          </p>
+        </div>
+        {% endif %}
+        <!-- Link to about us section -->
+          <a href="#about-us">
+            <p class="visually-hidden">Scroll Down Icon</p>
+            <div class="arrows-link-container d-none d-lg-block">
+              <div class="arrow arrow-first"></div>
+              <div class="arrow arrow-second"></div>
+            </div>
+          </a>
+      </div>
     </div>
-    <div class="row">   
-        <div class="col align-self-center">
-            <button class="book-btn">Book a Table</button>
-        </div>
-    </div>   
-</div>
-
-<div class="row content col-10 col-lg-9">
-    <div class="center-container" id="about-us">
-      <h2><span>Why dine with us? <i class="fas fa-globe"></i></span></h2>
-      <div class="flex sp-around">
-        <img
-        src="{% static 'mccarthysbistro/media/restaurant_img1.jpg' %}"
-        alt="Restaurant guests enjoying a meal"/>
-        <img
-        class="d-none d-lg-block"
-        src="{% static 'mccarthysbistro/media/restaurant_img2.jpg' %}"
-        alt="picture of the restaurant's interior"/>
-</div>
-  
-
-
-<div id="about-us-text">
-    <p>
-        Welcome to McCarthy's Bistro, Cobh's premier dining destination! Nestled in the picturesque County Cork, Ireland, 
-        our restaurant has been delighting locals and visitors alike with our exceptional cuisine and warm hospitality. 
-        Step into a world of culinary excellence and embark on a gastronomic journey like no other.
-        <br>
-
-        At McCarthy's Bistro, we believe that dining is an art form, and every dish we serve is a masterpiece 
-        crafted with passion, creativity, and the finest ingredients. Our dedicated team of talented chefs takes pride 
-        in creating innovative and flavoursome dishes that showcase the best of Irish and international flavors, 
-        all while embracing the rich culinary heritage of Cobh.
-        <br>
-        We source the freshest seasonal ingredients from local farmers and producers, ensuring that each 
-        plate is bursting with authentic flavors and textures. 
-        Whether you're a local resident or a traveler exploring the wonders of Cobh, McCarthy's Bistro invites you 
-        to experience the epitome of culinary excellence. Join us for an unforgettable dining experience that celebrates
-        the rich flavors of County Cork while embracing the warmth and hospitality that Ireland is renowned for. 
-        <br>
-        Make a reservation today and let us take you on a culinary journey that will tantalize your taste buds
-         and create lasting memories.
-    </p>
-</div>
-
-<div class="home-container" id="about-us">
-    <h2><span>From our lovely guests <i class="fas fa-comment-dots"></i></span></h2>  
-  </div>
-</div>
-
- <!-- Bottom to top button -->
- <button type="button" class="btn btn-floating btn-lg btn-simple"  id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-    <span class="visually-hidden">Back to top button</span>
- </button>
 </div>
 {% endblock %}

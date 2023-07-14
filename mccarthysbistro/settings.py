@@ -180,8 +180,8 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-# LOGIN_URL = '/accounts/login'
-# LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/'
 ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
 ACCOUNT_FORMS = {
     'signup': 'mccarthysbistro.forms.CustomSignupForm'
