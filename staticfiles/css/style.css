@@ -207,6 +207,36 @@ main {
     animation: none;
 }
 
+/* ----------------------REGISTER/LOGIN LINK ANIMATION----------------------------- */
+
+.bck-login {
+    background-color: #050301b3;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.bck-login p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.authenticate-link {
+    color: var(--orange);
+    box-shadow: 0 0 0 0 rgb(234, 229, 229);
+    transform: scale(1);
+    animation: pulse 3s infinite;
+    letter-spacing: 2px;
+}
+
+.authenticate-link:hover {
+    color: var(--background);
+}
+
+
+
 @keyframes btn-pulse {
     0% {
         transform: scale(0.95);
@@ -487,8 +517,10 @@ footer i:hover {
 
     /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
     .auth-form {
+        position: absolute;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%, -50%);
         width: 80%;
     }
 
