@@ -207,11 +207,35 @@ main {
     animation: none;
 }
 
-.signup-btn{
-    color: var(--orange);
-    
+/* ----------------------REGISTER/LOGIN LINK ANIMATION----------------------------- */
 
+.bck-login {
+    background-color: #050301b3;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    padding: 5px;
+    margin-bottom: 0;
 }
+
+.bck-login p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.authenticate-link {
+    color: var(--orange);
+    box-shadow: 0 0 0 0 rgb(234, 229, 229);
+    transform: scale(1);
+    animation: pulse 3s infinite;
+    letter-spacing: 2px;
+}
+
+.authenticate-link:hover {
+    color: var(--green);
+}
+
+
 
 @keyframes btn-pulse {
     0% {
