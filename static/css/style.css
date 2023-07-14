@@ -380,6 +380,9 @@ input[type=checkbox]:hover {
 }
 
 /* -------Footer-------- */
+footer{
+    flex-shrink: 0;
+}
 .footer {
     z-index: 1;
     background-color: antiquewhite;
