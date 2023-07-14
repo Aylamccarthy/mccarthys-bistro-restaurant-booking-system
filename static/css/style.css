@@ -207,6 +207,12 @@ main {
     animation: none;
 }
 
+.signup-btn{
+    color: var(--orange);
+    
+
+}
+
 @keyframes btn-pulse {
     0% {
         transform: scale(0.95);

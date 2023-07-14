@@ -9,7 +9,7 @@
         <div id="fade-container">
           <div class="row">
             <!-- Logo title -->
-            <div><h1 class="logo">McCarthy's Bistro</h1></div>
+            <div><h2 class="logo">McCarthy's Bistro</h2></div>
             <div>
               <p class="decorated"><span>Since 2003</span></p>
             </div>
@@ -17,7 +17,7 @@
           <!-- Slogan -->
           <div class="row">
             <div class="col">
-              <h3 class="slogan">Unforgettable Dining, Memorable Moments</h3>
+              <p class="slogan">Unforgettable Dining, Memorable Moments</p>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
         <!-- Links to Login/Register page -->
         <div class="col bck-login">
           <p>
-            To enjoy all the features please <span><a class="authenticate-link" href="{% url 'account_login' %}"><b>LOGIN</b></a> / <a  class="authenticate-link" href="{% url 'account_signup' %}"><b>REGISTER</b></a></span>
+            To enjoy all the features please <span><a class="authenticate-link" href="{% url 'account_login' %}"><b class="signup-btn">LOGIN</b></a> / <a  class="authenticate-link" href="{% url 'account_signup' %}"><b class="signup-btn">REGISTER</b></a></span>
           </p>
         </div>
         {% endif %}
