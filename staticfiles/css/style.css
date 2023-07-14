@@ -401,4 +401,92 @@ footer i:hover {
     color: #3a3a3a;
 }
 
+/* --------------------------------------------------- SMALL AND MEDIUM DEVICES------------------------------------------------------------------*/
+@media (max-width: 992px) {
+    /* ----------------------NAVBAR----------------------------- */
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer {
+        margin-top: auto;
+    }
+    .active {
+        transform: scale(1.1) translateX(17px);
+    }
+    .navbar li:hover:not(.active),
+    .navbar li:focus:not(.active) {
+        transform: scale(1.1) translateX(17px);
+    }
+    #home-background-container {
+        height: 50vh;
+    }
+    #fade-container h1 {
+        font-size: 3.6vh;
+    }
+    .slogan {
+        font-size: 3vh;
+    }
+    .content {
+        box-shadow: 0px 0px 40px 40px #140c08b0;
+    }
+    .center-container h2 {
+        margin-top: 5vh;
+        width: 100%;
+    }
+    #about-us img {
+        height: auto;
+        width: 100%;
+    }
+    .background-container {
+        padding: 40px 0px;
+    }
+    .auth-form {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .form-submit:hover {
+        background-color: antiquewhite;
+    }
+    .ilustrate-logo {
+        height: 30vh;
+        position: absolute;
+        left: 50%;
+        top: 57%;
+        transform: translateX(-50%);
+    }
+}
+/* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    #fade-container h1 {
+        font-size: 3.6vh;
+    }
+    .slogan {
+        font-size: 3vh;
+    }
+    .content {
+        box-shadow: 0px 0px 20px 20px #140c08b0;
+    }
+    .content-wrapper {
+        min-height: auto;
+    }
+    .input-container {
+        align-items: stretch;
+        width: 90%;
+    }
+    .input-container input {
+        width: 100%;
+    }
+    #id_remember{
+        position: relative;
+        left: 50%
+    }
+    .background-container {
+        padding: 20px 0px;
+    }
+    .auth-form {
+        min-height: 80vh;
+    }
+}
 
