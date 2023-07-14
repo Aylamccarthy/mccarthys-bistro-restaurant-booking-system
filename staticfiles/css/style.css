@@ -401,6 +401,78 @@ footer i:hover {
     color: #3a3a3a;
 }
 
+/* --------------------------------------------------- LARGE DEVICES------------------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        margin-top: auto;
+    }
+
+    /* -----------------------NAVBAR---------------------------- */
+    .navbar li {
+        margin-right: 10px;
+    }
+
+    /* -----------------------HOME PAGE ---------------------------- */
+    #home-background-container {
+        height: 80vh;
+    }
+
+    #fade-container h1 {
+        font-size: 3.6vh;
+    }
+
+    .slogan {
+        font-size: 3vh;
+    }
+
+    .content {
+        box-shadow: 0px 0px 40px 40px #140c08b0;
+    }
+
+    .center-container h2 {
+        margin-top: 5vh;
+        width: 100%;
+    }
+
+    #about-us img {
+        height: 30vw;
+    }
+
+
+    .background-container {
+        padding: 40px 0px;
+        min-height: 87vh;
+    }
+
+    /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+    .auth-form {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    .form-submit:hover {
+        background-color: antiquewhite;
+    }
+
+     /* -----------------------BOOKING PAGE---------------------------- */
+    .card {
+        height: 50vh;
+    }
+
+    .table-container {
+        grid-template-columns: 35% 30% 25%;
+        grid-template-rows: 28% 29% 35%;
+    }
+}
+
 /* --------------------------------------------------- SMALL AND MEDIUM DEVICES------------------------------------------------------------------*/
 @media (max-width: 992px) {
     /* ----------------------NAVBAR----------------------------- */
@@ -449,13 +521,7 @@ footer i:hover {
     .form-submit:hover {
         background-color: antiquewhite;
     }
-    .ilustrate-logo {
-        height: 30vh;
-        position: absolute;
-        left: 50%;
-        top: 57%;
-        transform: translateX(-50%);
-    }
+   
 }
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
 @media (max-width: 768px) {
