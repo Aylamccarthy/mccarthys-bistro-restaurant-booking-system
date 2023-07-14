@@ -577,6 +577,7 @@ footer i:hover {
 }
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
 @media (max-width: 768px) {
+     /* -----------------------HOME PAGE---------------------------- */
     #fade-container h1 {
         font-size: 3.6vh;
     }
@@ -607,4 +608,18 @@ footer i:hover {
         min-height: 80vh;
     }
 }
+ /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+ .input-container {
+    align-items: stretch;
+    width: 90%;
+}
 
+.input-container input {
+
+    width: 100%;
+}
+
+.auth-form {
+    min-height: 80vh;
+    width: 91%;
+}
