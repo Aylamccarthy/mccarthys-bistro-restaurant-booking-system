@@ -331,6 +331,45 @@ input[type=checkbox]:hover {
     color: #ddeda9;
 }
 
+#flexButtons{
+    width: fit-content;
+}
+
+#flexButtons button{
+    margin: 0px 10px;
+}
+
+.messages{
+    list-style-type: none;
+    padding: 0px;
+}
+.alert {
+
+    animation: autoHide 0s ease-in 2s forwards;
+}
+
+@keyframes autoHide {
+    to {
+        width:0;
+        height:0;
+        padding: 0px;
+        border: 0px;
+        overflow:hidden;
+    }
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+#overviewCollapse>span:first-of-type{
+    color: #ddeda9;
+}
+
 
 /* ----------------------TEXT DECORATION----------------------------- */
 .decorated {
@@ -601,7 +640,7 @@ footer i:hover {
     .background-container {
         padding: 20px 0px;
     }
-   
+}
  /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
  .input-container {
     align-items: stretch;
