@@ -9,4 +9,7 @@ from django.views.generic import TemplateView
 
 
 class Home(TemplateView):
+    """
+    View to render homepage
+    """
     template_name = "home/index.html"

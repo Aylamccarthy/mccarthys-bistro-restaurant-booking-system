@@ -566,10 +566,7 @@ footer i:hover {
     .background-container {
         padding: 20px 0px;
     }
-    .auth-form {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    
     .form-submit:hover {
         background-color: antiquewhite;
     }
@@ -604,10 +601,7 @@ footer i:hover {
     .background-container {
         padding: 20px 0px;
     }
-    .auth-form {
-        min-height: 80vh;
-    }
-}
+   
  /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
  .input-container {
     align-items: stretch;
