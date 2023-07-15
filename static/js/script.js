@@ -345,18 +345,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
-    
-
-
-
-
-
-
-
-
-    
-  
-  
       // --------------------------ADD EVENT LISTENERS FOR NUMBER INPUT BUTTONS--------------------------
       additionButton.addEventListener('click', () => {
         personsNumber.stepDown();
