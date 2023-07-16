@@ -145,3 +145,5 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 ### Code
 
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
+
+Black - Black is a PEP 8 compliant opinionated formatter. Used to format code.

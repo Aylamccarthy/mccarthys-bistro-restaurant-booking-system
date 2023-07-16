@@ -5,6 +5,7 @@ from operator import truediv
 
 class Table(models.Model):
     """Model for table object"""
+
     code = models.CharField(max_length=10, unique=True)
     featured_image = CloudinaryField("image")
     no_of_persons = models.IntegerField(default=1)
@@ -15,6 +16,7 @@ class Table(models.Model):
 
 class Booking(models.Model):
     """Model for booking object"""
+
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
