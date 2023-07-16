@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
     }
   
-    if (window.location.pathname=='/%2Fbookings/booking') {
+    if (window.location.pathname=='/bookings/createbookings/') {
       const datePicker = document.querySelector("#datePicker");
       const startTime = document.querySelector("#startTime");
       const endTime = document.querySelector("#endTime");
       const customer_name = document.querySelector("#fullName");
       const customer_email = document.querySelector("#email");
       const book_auth = document.querySelector("#bookAuthenticate");
-      const personsNumber = document.querySelector("#persons");
-      const additionButton = document.getElementsByClassName("number-input")[0].getElementsByTagName("button")[0];
+      const tableSelect = document.querySelector("#tableCode")
+      const tableOptions = document.querySelectorAll('#tableCode > option')
       const substractionButton = document.getElementsByClassName("number-input")[0].getElementsByTagName("button")[1];
       const findTableButton = document.getElementsByClassName("continue")[0];
       const continueButton = document.getElementsByClassName("continue")[1];
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       const flexButtons = document.querySelector("#flexButtons");
       const booking_form = document.querySelector("#booking_form");
       const bookingOverview = document.querySelector("#bookingOverview");
+      const noOfPersons = document.querySelector("#tablePersons");
   
       // --------------------------SET DATE PICKER INPUT MIN VALUE TO TODAY DATE--------------------------
       datePicker.min = new Date().toLocaleDateString('en-IE')
@@ -69,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     // --------------------------ENABLE/DISABLE CONTACT INPUTS WHEN 'BOOK IT ON MY NAME' IS CHECKED--------------------------
-    book_auth.addEventListener('click', () => {
+    book_auth.addEventListener('click', manipulateInputs = () => {
       if(book_auth.checked == true){
         customer_name.readOnly = true;
         customer_email.readOnly = true;
       }
       else{
-        customer_name.disabled = false;
-        customer_email.disabled = false;
+        customer_name.readOnly= false;
+        customer_email.readOnly = false;
       }
     })
 
@@ -226,8 +227,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       if (!isRequired(end)) {
           showError(endTime, 'Please choose an end time');
-      } else if(!isBetween(end, "10:00", "24:00")){
-          showError(endTime, 'Choose a time between 10:00 and 24:00');
+      } else if(!isBetween(end, "09:00", "23:00")){
+          showError(endTime, 'Choose a time between 09:00 and 23:00');
       } else if (!isTimeIntervalValid(start, end)){
           showError(endTime, 'End hour must be grater than start hour');
       } else if(!isTimeIntervalCorrect(start, end)){
@@ -291,8 +292,84 @@ document.addEventListener("DOMContentLoaded", function(event) {
         startTime.readOnly = true;
         endTime.readOnly = true;
         findTableButton.style.display = "none";
-        window.location = "/bookings/createbookings#tableContentCollapse"
+        window.location = "/bookings/createbookings/#tableContentCollapse"
         document.querySelector('#tableContentCollapse').style.display = 'block';
+
+         // get database entries for bookings and tables from html 
+         var bookingsData = JSON.parse(JSON.parse(document.getElementById('bookings_data').textContent));
+         var tablesData = JSON.parse(JSON.parse(document.getElementById('tables_data').textContent));
+         var tablesStatusImages = []
+
+         //check if tables are busy for the date and time selected and create another array of objects with tables code and status image
+         for(let table of tablesData){
+
+           var free = true;
+
+           for(let booking of bookingsData){
+             var bookingStart = booking.fields.start_time;
+             var bookingEnd = booking.fields.end_time;
+
+             if(booking.fields.date == datePicker.value && booking.fields.table == table.fields.code && (!(endTime.value <= bookingStart) && !(startTime.value >= bookingEnd))){
+               free = false;
+               break;
+             }
+           }
+
+           if(free == true){
+             tablesStatusImages.push({"code": table.fields.code, "status":"free", "persons":table.fields.no_of_persons, "image_url":table.fields.table_free_img})
+           }
+           else{
+             tablesStatusImages.push({"code": table.fields.code, "status":"busy", "persons":table.fields.no_of_persons, "image_url":table.fields.table_occupied_img})
+           }
+         }
+
+         // create images elements and append them to html grid container
+         let tableList = document.getElementsByClassName('table-container')[0]
+         tablesStatusImages.forEach(table => {
+           let img = document.createElement('img');
+           img.src ='https://res.cloudinary.com/useriasminna/' + table.image_url
+           tableList.appendChild(img);
+         })
+
+         //remove busy tables from select options
+         for(i = 0; i < tablesStatusImages.length; i++){
+           if(tablesStatusImages[i].status == 'busy')
+             tableOptions[i].remove()
+             for(j=i; j< tableOptions.length; j++){
+               tableOptions[j] = tableOptions[j+1]
+             }
+         }
+
+
+         if(tableSelect.options.length == 0){
+           tableSelect.options.add(new Option('No table available', 'message'))
+           tableSelect.options[0].selected = true;
+           tableSelect.disable=true;
+           noOfPersons.value = "";
+           continueButton.style.display = "none"
+         }
+         else{
+           tableSelect.options[0].selected = true;
+           //set default value for number of persons
+           for(let table of tablesStatusImages){
+             if(table.code == tableOptions[0].innerHTML){
+               noOfPersons.value = table.persons;
+               break;
+             }
+           }
+         }
+
+         //make number of persons input to update its value on select change
+         tableSelect.addEventListener("change", () => {
+
+           for(let table of tablesStatusImages){
+             if(table.code == tableSelect.options[tableSelect.selectedIndex].text){
+               noOfPersons.value = table.persons;
+               break;
+             }
+           }
+         })
+
 
       }
     })
@@ -304,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         // display next section
         flexButtons.style.display = "none";
-        window.location = "/bookings/createbookings#bookingContactCollapse"  
+        window.location = "/bookings/createbookings/#bookingContactCollapse"  
         document.querySelector('#bookingContactCollapse').style.display = 'block';
 
     })
@@ -312,8 +389,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
      // -------------------------CHECK THIRD BOOKING SECTION VALIDITY --------------------------
     finishButton.addEventListener("click", () => {
       // check validity
+      book_auth.removeEventListener("click", manipulateInputs)
 
       if(book_auth.checked == false){
+        customer_name.readOnly = true
+        customer_email.readOnly = true
+
+        //prevent user from changing checbox state
+        book_auth.addEventListener("click", (event)=>{
+
+          setTimeout(function() {
+            this.removeAttr('checked');
+          }, 0);
+
+          event.preventDefault();
+          event.stopPropagation();
+        })
+
+        customer_name.parentElement.style.display="none";
+        customer_email.parentElement.style.display="none";
         
         let isNameValid = checkCustomerName();
         let isEmailValid = checkEmail();
@@ -333,9 +427,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
           document.querySelector('#overviewCollapse').style.display = 'block';
       }
 
-      window.location = "/bookings/createbookings#overviewCollapse"  
+      window.location = "/bookings/createbookings/#overviewCollapse"  
       bookingOverview.textContent = "You have selected a booking on " + datePicker.value + ", from " + startTime.value + " to " + endTime.value +
-                                    ", table for " + "x" + " persons."     
+                                    ", table for " + noOfPersons.value  + " persons."    
+                                    
+       //update overview every time another table is selected before submit
+       tableSelect.addEventListener("change", () => {
+
+        bookingOverview.textContent = "You have selected a booking on " + datePicker.value + ", from " + startTime.value + " to " + endTime.value +
+        ", table for " + noOfPersons.value + " persons."
+
+      })                
     })
 
 
