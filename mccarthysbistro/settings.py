@@ -60,10 +60,12 @@ INSTALLED_APPS = [
     'users',
     #'bookings',
     'booking',
+    'rangefilter',
     
     # Others
     'crispy_forms',
     'crispy_bootstrap5',
+    
 
 ]
 

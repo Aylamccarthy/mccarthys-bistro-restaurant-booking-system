@@ -4,8 +4,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 CAPACITY = ((2, "2"), (4, "4"), (6, "6"), (8, "8"), (10, "10"), (12, "12"))
-BOOKING_TIME = ((1, "12:00pm - 1:45pm"), (2, "2:00pm - 3:45pm"),
-                (3, "4:00pm - 5:45pm"), (4, "6:00pm - 7:45pm"), (5, "8:00pm - 9:45pm"))
+BOOKING_TIME = (
+    (1, "12:00pm - 1:45pm"),
+    (2, "2:00pm - 3:45pm"),
+    (3, "4:00pm - 5:45pm"),
+    (4, "6:00pm - 7:45pm"),
+    (5, "8:00pm - 9:45pm"),
+)
 
 
 class Table(models.Model):
@@ -14,7 +19,7 @@ class Table(models.Model):
     wheelchair_accessible = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['table_number']
+        ordering = ["table_number"]
 
     def __str__(self):
         return str(self.table_number)
@@ -22,15 +27,17 @@ class Table(models.Model):
 
 class Booking(models.Model):
     customer = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="booking_customer")
+        User, on_delete=models.CASCADE, related_name="booking_customer"
+    )
     booked_table = models.ForeignKey(
-        Table, on_delete=models.CASCADE, related_name="booking_table")
+        Table, on_delete=models.CASCADE, related_name="booking_table"
+    )
     number_of_guests = models.IntegerField(default=2)
     booking_date = models.DateField()
     booking_time = models.IntegerField(choices=BOOKING_TIME, default=1)
 
     class Meta:
-        ordering = ['booking_date']
+        ordering = ["booking_date"]
 
     def __str__(self):
         return str(self.pk)
