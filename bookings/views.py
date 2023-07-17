@@ -1,44 +1,77 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 from .forms import newBookingForm
+import booking
 from django.shortcuts import render
-from .models import Booking
+from .models import Table
+from .models import Booking as BookingModel
 from django.views.generic.edit import FormView
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.serializers import serialize
+import json
 
-class Booking(TemplateView):
+
+class Booking(LoginRequiredMixin, TemplateView):
     template_name = "bookings.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super(Booking, self).get_context_data(*args, **kwargs)
         context["booking_form"] = newBookingForm()
+        context["tables_list"] = serialize("json", Table.objects.all())
+        context["bookings_list"] = serialize("json", BookingModel.objects.all())
         return context
 
     def post(self, request):
         if request.method == "POST":
             booking_form = newBookingForm(data=request.POST)
             booking_form.fields["book_on_user"].required = False
-            if booking_form.is_valid():
-                if booking_form.cleaned_data["book_on_user"]:
-                    booking_form.instance.customer_email = request.user.email
 
-                    if request.user.admin == "TRUE":
-                        booking_form.instance.customer_full_name = "admin"
+            if booking_form.is_valid():
+                booking_date = booking_form.cleaned_data["date"]
+                booking_start_time = booking_form.cleaned_data["start_time"]
+                booking_end_time = booking_form.cleaned_data["end_time"]
+
+                table_code = booking_form.cleaned_data["table_code"]
+                booking_table = Table.objects.get(code=table_code)
+
+                if booking_form.cleaned_data["book_on_user"]:
+                    booking_customer_email = request.user.email
+
+                    if request.user.admin:
+                        booking_customer_full_name = "Admin"
                     else:
-                        booking_form.instance.customer_full_name = (
+                        booking_customer_full_name = (
                             request.user.first_name + " " + request.user.last_name
                         )
+                else:
+                    booking_customer_email = booking_form.cleaned_data["customer_email"]
+                    booking_customer_full_name = booking_form.cleaned_data[
+                        "customer_full_name"
+                    ]
 
-                booking = booking_form.save(commit=False)
+                booking = BookingModel(
+                    date=booking_date,
+                    start_time=booking_start_time,
+                    end_time=booking_end_time,
+                    table=booking_table,
+                    customer_full_name=booking_customer_full_name,
+                    customer_email=booking_customer_email,
+                )
                 booking.save()
                 messages.success(request, "Your booking was successfully registered")
                 return HttpResponseRedirect("/bookings/createbookings")
 
             else:
-                return HttpResponse(booking_form.errors.as_json())
+                messages.error(
+                    request,
+                    "There was a problem submiting your booking. Please try again!",
+                )
+                return HttpResponseRedirect("/bookings/createbookings")
+                # return HttpResponse(booking_form.errors.as_json())
         else:
-            booking_form = newBookingForm()
+            booking_form = newBookingForm(request.GET)
 
         return render(
             request,
