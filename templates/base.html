@@ -49,6 +49,9 @@
                 <a class="nav-link" href="#">Menu</a>
               </li>
               {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'managebookings' %}">Bookings</a>
+              </li>
                 <li class="nav-item">
                   <a class="nav-link {% if url_name == 'bookings' %}active{% endif %}" href="{% url 'createbooking' %}">Make a Booking</a>
                 </li>
