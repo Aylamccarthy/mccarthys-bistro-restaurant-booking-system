@@ -15,6 +15,8 @@ class User(AbstractBaseUser):
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
 
+    USERNAME_FIELD = 'email'
+
     @property
     def is_active(self):
         return self.active 
