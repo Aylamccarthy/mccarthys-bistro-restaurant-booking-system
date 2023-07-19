@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'reviews',
-    'users',
+    #'users',
     #'bookings',
     'booking',
     'rangefilter',

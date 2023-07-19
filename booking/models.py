@@ -1,6 +1,4 @@
 from django.db import models
-
-from django.db import models
 from django.contrib.auth.models import User
 
 CAPACITY = ((2, "2"), (4, "4"), (6, "6"), (8, "8"), (10, "10"), (12, "12"))
@@ -14,6 +12,7 @@ BOOKING_TIME = (
 
 
 class Table(models.Model):
+    """ Model to create Tables """
     table_number = models.IntegerField(unique=True)
     capacity = models.IntegerField(choices=CAPACITY, default=2)
     wheelchair_accessible = models.BooleanField(default=True)
@@ -26,6 +25,7 @@ class Table(models.Model):
 
 
 class Booking(models.Model):
+    """ Model to create a booking """
     customer = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_customer"
     )
