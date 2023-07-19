@@ -7,7 +7,7 @@ from .models import Booking, Table
 class BookingForm(forms.ModelForm):
     """
     Form to create and edit a booking
-    
+
     """
 
     class Meta:
@@ -25,9 +25,9 @@ class BookingForm(forms.ModelForm):
         Get form data and clean, check capacity and
         throw errors when tables not available
         """
-        date = self.cleaned_data['booking_date']
-        time = self.cleaned_data['booking_time']
-        guests = self.cleaned_data['number_of_guests']
+        date = self.cleaned_data["booking_date"]
+        time = self.cleaned_data["booking_time"]
+        guests = self.cleaned_data["number_of_guests"]
 
         table_booked = None
 
@@ -41,11 +41,10 @@ class BookingForm(forms.ModelForm):
         # Filter tables with capacity greater or equal
         # to the number of guests
         bookings_on_requested_date = Booking.objects.filter(
-            booking_date=date, booking_time=time)
+            booking_date=date, booking_time=time
+        )
         # Get bookings on specified date
-        tables_with_capacity = list(Table.objects.filter(
-            capacity__gte=guests
-        ))
+        tables_with_capacity = list(Table.objects.filter(capacity__gte=guests))
         # Iterate over tables not booked to get lowest
         # capacity table
         for booking in bookings_on_requested_date:
@@ -59,20 +58,17 @@ class BookingForm(forms.ModelForm):
                 tables_with_capacity.append(table_booked)
         # Throw validation errors on form
         if date < datetime.today().date():
-            raise ValidationError(
-                'Invalid date - Booking cannot be in the past')
+            raise ValidationError("Invalid date - Booking cannot be in the past")
         if table_booked is not None:
             if not tables_with_capacity and table_booked.capacity < guests:
                 raise ValidationError(
-                    'Sorry, we do not have a table' +
-                    ' available for that amount of guests'
+                    "Sorry, we do not have a table"
+                    + " available for that amount of guests"
                 )
         if not tables_with_capacity:
-            raise ValidationError('No tables available for this date and time')
+            raise ValidationError("No tables available for this date and time")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['booking_date'].widget.attrs['class'] = 'datepicker'
-        self.fields['booking_date'].widget.attrs['autocomplete'] = 'off'
-
-
+        self.fields["booking_date"].widget.attrs["class"] = "datepicker"
+        self.fields["booking_date"].widget.attrs["autocomplete"] = "off"

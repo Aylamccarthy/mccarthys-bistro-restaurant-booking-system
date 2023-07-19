@@ -6,24 +6,24 @@ from .forms import BookingForm
 
 class CreateBookingView(LoginRequiredMixin, generic.CreateView):
     """
-    View to render createbookings 
+    View to render createbookings
     and allow user to create a booking
     """
+
     form_class = BookingForm
-    template_name = 'booking/booking.html'
+    template_name = "booking/booking.html"
     success_url = "/booking/createbooking"
     model = Booking
 
     def form_valid(self, form):
         form.instance.customer = self.request.user
-        date = form.cleaned_data['booking_date']
-        time = form.cleaned_data['booking_time']
-        guests = form.cleaned_data['number_of_guests']
-        tables_with_capacity = list(Table.objects.filter(
-            capacity__gte=guests
-        ))
+        date = form.cleaned_data["booking_date"]
+        time = form.cleaned_data["booking_time"]
+        guests = form.cleaned_data["number_of_guests"]
+        tables_with_capacity = list(Table.objects.filter(capacity__gte=guests))
         bookings_on_requested_date = Booking.objects.filter(
-            booking_date=date, booking_time=time)
+            booking_date=date, booking_time=time
+        )
 
         for booking in bookings_on_requested_date:
             for table in tables_with_capacity:
@@ -45,8 +45,9 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
     """
     View to render ManageBookings
     """
+
     model = Booking
-    template_name = 'booking/managebookings.html'
+    template_name = "booking/managebookings.html"
 
     def get_queryset(self):
         if self.request.user.is_staff:
@@ -60,10 +61,24 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
     A view to provide a Form to the user
     to edit an event
     """
+
     form_class = BookingForm
-    template_name = 'booking/edit_booking.html'
+    template_name = "booking/edit_booking.html"
     success_url = "/booking/managebookings"
     model = Booking
+
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().customer
+
+
+class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    """A view to delete an event"""
+
+    model = Booking
+    success_url = "/booking/managebookings"
 
     def test_func(self):
         if self.request.user.is_staff:
