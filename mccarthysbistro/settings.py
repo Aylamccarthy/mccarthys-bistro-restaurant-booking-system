@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     # Apps
     'home',
     'reviews',
-    #'users',
+    'users',
     #'bookings',
     'booking',
     'rangefilter',
@@ -176,6 +176,7 @@ USE_L10N = True
 USE_TZ = True
 
 # Account Setup
+
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
