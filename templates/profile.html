@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %}
+
+<div class="row content col-10 col-lg-9">
+    <div class="center-container scroll min-h-100">
+        <div class="center-container profile">
+            <h2>Welcome back, {{ user.first_name }}</h2>
+            <small>{{ user.email }}</small><br><br>
+        </div>
+    </div>
+</div>
