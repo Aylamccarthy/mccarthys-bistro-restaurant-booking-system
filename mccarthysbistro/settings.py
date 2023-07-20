@@ -58,12 +58,11 @@ INSTALLED_APPS = [
     'home',
     'reviews',
     'users',
-    #'bookings',
+    # 'bookings',
     'booking',
     'menu',
     'contact',
-    
-    
+
     # Others
     'crispy_forms',
     'crispy_bootstrap5',
