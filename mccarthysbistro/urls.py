@@ -28,4 +28,5 @@ urlpatterns = [
     path('accounts/login/', login, name='account_login'),
     path('accounts/logout/', logout, name='account_logout'),
     path('menu/', include('menu.urls'), name='menu'),
+    path('contact/', include('contact.urls'), name='contact'),
 ]
