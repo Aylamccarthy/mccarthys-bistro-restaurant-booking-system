@@ -59,7 +59,7 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
 class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     """
     A view to provide a Form to the user
-    to edit an event
+    to edit a booking
     """
 
     form_class = BookingForm
@@ -75,7 +75,7 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
 
 
 class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
-    """A view to delete an event"""
+    """A view to delete a booking"""
 
     model = Booking
     success_url = "/booking/managebookings"
