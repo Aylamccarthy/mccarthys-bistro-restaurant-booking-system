@@ -13,4 +13,3 @@ class Menu(TemplateView):
     """
 
     template_name = "menu.html"
-  

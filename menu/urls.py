@@ -8,5 +8,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.Menu.as_view(), name='menu'),
+    path("", views.Menu.as_view(), name="menu"),
 ]
