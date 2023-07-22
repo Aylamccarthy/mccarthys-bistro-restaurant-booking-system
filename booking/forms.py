@@ -14,6 +14,9 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ["number_of_guests", "booking_date", "booking_time"]
         booking_date = forms.DateField(help_text="Date must be a future date")
+        widgets = {
+            'booking_date': forms.widgets.DateInput(attrs={'type': 'date'})
+        }
         labels = {
             "number_of_guests": "Number Of Guests",
             "booking_date": "Date",
