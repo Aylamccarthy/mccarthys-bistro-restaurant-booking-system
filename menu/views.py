@@ -3,13 +3,12 @@ Menu App - Views
 ----------------
 Views for Menu App.
 """
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 from django.shortcuts import render
+from .models import Menu
 
 
-class Menu(TemplateView):
-    """
-    A view to render menu page
-    """
-
-    template_name = "menu.html"
+class MenuListView(ListView):
+    """ View menu list """
+    model = Menu
+    template_name = 'menu.html'
