@@ -13,3 +13,5 @@ class Home(TemplateView):
     View to render homepage
     """
     template_name = "home/index.html"
+
+
