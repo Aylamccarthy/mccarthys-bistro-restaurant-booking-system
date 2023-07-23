@@ -421,6 +421,31 @@ input[type=checkbox]:hover {
     transform: translate(-50%, -50%);
     width: 60%;
 }
+
+/*-----------Menu Page------------------*/
+.meal{
+    text-align: left;
+}
+
+.meal h5{
+    margin-right: 20px;
+
+}
+.menu img{
+    height: 18vh;
+    margin-top: -10px;
+}
+
+.heart{
+    background-color: transparent;
+    border: none;
+    color: antiquewhite;
+    font-size: x-large;
+}
+
+
+
+
 /*-----------LOGOUT MODAL---------------*/
 
 .modal {
