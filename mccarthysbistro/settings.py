@@ -187,10 +187,10 @@ ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/'
-ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
-ACCOUNT_FORMS = {
-    'signup': 'mccarthysbistro.forms.CustomSignupForm'
-}
+# ACCOUNT_ADAPTER = 'mccarthysbistro.adapters.AccountAdapter'
+# ACCOUNT_FORMS = {
+#   'signup': 'mccarthysbistro.forms.CustomSignupForm'
+# }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
