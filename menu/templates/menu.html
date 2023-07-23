@@ -11,7 +11,7 @@
             <p>If you want to mark your favourite meals, please <span><a class="authenticate-link" href="{% url 'account_login' %}"><b>LOGIN</b></a> / <a  class="authenticate-link" href="{% url 'account_signup' %}"><b>REGISTER</b></a></span></p>
             {% endif %}
             <br>
-            {% for menu in menu_list %}
+            {% for meal in menu_list %}
             <!-- Menu item container -->
                 <div class="row flex meal col-12 col-lg-10">
                     <div class="col-6 col-md-3 col-lg-2">
