@@ -406,7 +406,7 @@ input[type=checkbox]:hover {
 .auth-form {
     text-align: center;
     background-color: #140c08b0;
-    padding: 70px 20px;
+    padding: 50px 20px;
     color: antiquewhite;
 
     box-shadow: #ffffff 0px 0px 0px 2px,
@@ -415,11 +415,54 @@ input[type=checkbox]:hover {
         rgb(70 42 29) 0px 0px 0px 12px,
         #ffffff 0px 0px 0px 14px;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
+    position: relative;
+    left: 30%;
+}
+
+
+.auth-form h1 {
+    width: 80%;
+    margin: 0px auto 25px auto;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.form-submit {
+    background-color: antiquewhite;
+    padding: 5px 8px;
+    border: 1px solid #f6d19f;
+    color: black;
+
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-submit:hover {
+    background-color: rgb(249, 212, 163);
+}
+
+.form-submit:focus-visible {
+    outline: none;
+}
+
+.errorlist {
+    font-size: smaller;
+    color: burlywood;
+    padding: 0px 14px;
+    text-align: start;
+}
+
+.booking-error {
+    padding: 0px;
+    text-align: center;
 }
 
 /*-----------Menu Page------------------*/
@@ -692,6 +735,30 @@ footer i:hover {
         background-color: antiquewhite;
     }
 
+    /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+    .auth-form {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    .form-submit:hover {
+        background-color: antiquewhite;
+    }
+
+    .ilustrate-logo {
+        height: 30vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ilustrate {
+        height: 35vh;
+    }
+
+
      /* -----------------------BOOKING PAGE---------------------------- */
     .card {
         height: 50vh;
@@ -794,20 +861,23 @@ footer i:hover {
     .background-container {
         padding: 20px 0px;
     }
-}
- /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
- .input-container {
-    align-items: stretch;
-    width: 90%;
-}
+      /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+    .input-container {
+        align-items: stretch;
+        width: 90%;
+    }
 
-.input-container input {
+    .input-container input {
 
-    width: 100%;
-}
+        width: 100%;
+    }
 
-.auth-form {
-    min-height: 80vh;
-    width: 91%;
+    .auth-form {
+        min-height: 80vh;
+        width: 91%;
+    }
+
+
+    
 }
 
