@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 }
+)
 
   if (window.location.pathname=='/') {
   
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Google Map Initialization //
 
-    if (window.location.pathname.includes('/contact/')) {
+
 
       function initMap() {
         // The location of Cobh
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
       }
       initMap()
-    }
+  
   
 
     // Manage the display of favorite forms to ensure users can only add meals to their 'favorites' once //
