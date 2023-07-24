@@ -82,6 +82,11 @@ main {
     overflow-x: hidden;
 }
 
+.a-start {
+    align-items: flex-start;
+}
+
+
 /* ----------------------------NAVIGATION BAR-------------------------*/
 .logo {
     font-family: 'Merriweather', serif;
@@ -156,6 +161,10 @@ main {
     position: relative;
 }
 
+.content-wrapper{
+    background-color: var(--background);
+
+}
 .book-btn{
     border: 1px solid #fb5322;
     background-color: var(--green);
@@ -486,12 +495,23 @@ input[type=checkbox]:hover {
     font-size: x-large;
 }
 
+.heart i {
+    font-size: x-large;
+    margin-left: 5px;
+}
+
+.meal>div {
+    padding: 0px 5px 0px 0px;
+    margin-bottom: 5px;
+}
+
 
 /*-----------CONTACT PAGE---------------*/
 .timetable{
     padding: 15px;
     border-radius: 20px;
-    background-color: #faebd757;
+    background-color: rgb(74, 90, 92);
+    color: white;
 }
 
 .timetable h5{
@@ -853,19 +873,10 @@ footer i:hover {
     .content-wrapper {
         min-height: auto;
     }
-    .input-container {
-        align-items: stretch;
-        width: 90%;
-    }
-    .input-container input {
-        width: 100%;
-    }
-    #id_remember{
-        position: relative;
-        left: 50%
-    }
+   
     .background-container {
         padding: 20px 0px;
+        min-height: auto;
     }
       /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
     .input-container {
@@ -882,6 +893,12 @@ footer i:hover {
         min-height: 80vh;
         width: 91%;
     }
+
+    /* -----------------------MENU PAGE---------------------------- */
+    .meal-header {
+        flex-direction: column;
+    }
+
 
 
     
