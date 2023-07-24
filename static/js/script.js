@@ -27,26 +27,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     // Google Map Initialization //
-
-
-
-      function initMap() {
-        // The location of Cobh
-        const cobh = { lat: 51.84914, lng: -8.29743 }; 
-        // The map, centered at Cobh
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: cobh,
-        });
-        // The marker, positioned at Cobh
-        const marker = new google.maps.Marker({
-          position: cobh,
-          map: map,
-        });
-      }
-      initMap()
-  
-  
+    function initMap() {
+      // The location of Cobh
+      const cobh = { lat: 51.84914, lng: -8.29743 }; 
+      // The map, centered at Cobh
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: cobh,
+      });
+      // The marker, positioned at Cobh
+      const marker = new google.maps.Marker({
+        position: cobh,
+        map: map,
+      });
+    }
 
     // Manage the display of favorite forms to ensure users can only add meals to their 'favorites' once //
 
