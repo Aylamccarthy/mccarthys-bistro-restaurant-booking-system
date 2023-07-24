@@ -31,15 +31,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       function initMap() {
         // The location of Cobh
-        const uluru = { lat: 51.84898658752254, lng: -8.297876267961728  }; 
+        const cobh = { lat: 51.84914, lng: -8.29743 }; 
         // The map, centered at Cobh
         const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 4,
-          center: Cobh,
+          center: cobh,
         });
         // The marker, positioned at Cobh
         const marker = new google.maps.Marker({
-          position: Cobh,
+          position: cobh,
           map: map,
         });
       }
