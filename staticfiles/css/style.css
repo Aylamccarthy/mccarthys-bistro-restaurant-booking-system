@@ -406,7 +406,7 @@ input[type=checkbox]:hover {
 .auth-form {
     text-align: center;
     background-color: #140c08b0;
-    padding: 70px 20px;
+    padding: 50px 20px;
     color: antiquewhite;
 
     box-shadow: #ffffff 0px 0px 0px 2px,
@@ -415,11 +415,54 @@ input[type=checkbox]:hover {
         rgb(70 42 29) 0px 0px 0px 12px,
         #ffffff 0px 0px 0px 14px;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
+    position: relative;
+    left: 30%;
+}
+
+
+.auth-form h1 {
+    width: 80%;
+    margin: 0px auto 25px auto;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.form-submit {
+    background-color: antiquewhite;
+    padding: 5px 8px;
+    border: 1px solid #f6d19f;
+    color: black;
+
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-submit:hover {
+    background-color: rgb(249, 212, 163);
+}
+
+.form-submit:focus-visible {
+    outline: none;
+}
+
+.errorlist {
+    font-size: smaller;
+    color: burlywood;
+    padding: 0px 14px;
+    text-align: start;
+}
+
+.booking-error {
+    padding: 0px;
+    text-align: center;
 }
 
 /*-----------Menu Page------------------*/
@@ -561,6 +604,77 @@ footer i:hover {
     color: #3a3a3a;
 }
 
+/*-----------------------CUSTOM ERROR PAGES---------------------------------*/
+
+#custom-error {
+    position: relative;
+    height: 100vh;
+    background-color: var(--background);
+    color: antiquewhite;
+  }
+
+  #custom-error .custom-error {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  .custom-error {
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .custom-error .error-logo {
+    height: 220px;
+    line-height: 220px;
+  }
+
+  .custom-error .error-logo h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #222;
+    font-size: 220px;
+    letter-spacing: 10px;
+    margin: 0px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;
+  }
+
+  .custom-error .error-logo h1>span {
+    text-shadow: 2px 2px 0px #ffab00, -2px -2px 0px #ffab00, 0px 0px 8px #ff8700;
+  }
+
+  .custom-error p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+
+  .custom-error a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 700;
+    transition: 0.2s all;
+  }
+
+  .custom-error a:hover {
+    color: #ffab00;
+    border-color: #ffab00;
+  }
+
+
 /* --------------------------------------------------- LARGE DEVICES------------------------------------------------------------------*/
 
 @media (max-width: 1024px) {
@@ -621,6 +735,30 @@ footer i:hover {
         background-color: antiquewhite;
     }
 
+    /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+    .auth-form {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    .form-submit:hover {
+        background-color: antiquewhite;
+    }
+
+    .ilustrate-logo {
+        height: 30vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ilustrate {
+        height: 35vh;
+    }
+
+
      /* -----------------------BOOKING PAGE---------------------------- */
     .card {
         height: 50vh;
@@ -677,8 +815,29 @@ footer i:hover {
     .form-submit:hover {
         background-color: antiquewhite;
     }
-   
+
+/*--------CUSTOM ERROR PAGES---------*/
+    .custom-error .error-logo {
+        height: 122px;
+        line-height: 122px;
+      }
+
+    .custom-error .error-logo h1 {
+        font-size: 122px;
+    }
+
+    .custom-error p {
+        padding: 5px;
+      }
+      /* -----------------------WHERE TO FIND US PAGE---------------------------- */
+    .contact-responsive {
+        flex-direction: column;
+    }
+
 }
+
+   
+
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
 @media (max-width: 768px) {
      /* -----------------------HOME PAGE---------------------------- */
@@ -708,20 +867,23 @@ footer i:hover {
     .background-container {
         padding: 20px 0px;
     }
-}
- /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
- .input-container {
-    align-items: stretch;
-    width: 90%;
-}
+      /* -----------------------LOGIN/REGISTER PAGE---------------------------- */
+    .input-container {
+        align-items: stretch;
+        width: 90%;
+    }
 
-.input-container input {
+    .input-container input {
 
-    width: 100%;
-}
+        width: 100%;
+    }
 
-.auth-form {
-    min-height: 80vh;
-    width: 91%;
+    .auth-form {
+        min-height: 80vh;
+        width: 91%;
+    }
+
+
+    
 }
 
