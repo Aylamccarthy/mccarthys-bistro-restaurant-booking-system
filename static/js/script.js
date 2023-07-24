@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       sessionStorage.setItem('pageHasBeenLoaded', 'true');
     }
   }
+}
 
-    if (window.location.pathname=='/') {
+  if (window.location.pathname=='/') {
   
       // --------------------------ADD EVENT LISTENER FOR BOTTOM TO TOP BUTTON ON INDEX PAGE--------------------------
       //Get the button
@@ -23,6 +24,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
   
     }
+
+    // Google Map Initialization //
+
+    if (window.location.pathname.includes('/contact/')) {
+
+      function initMap() {
+        // The location of Cobh
+        const uluru = { lat: 51.84898658752254, lng: -8.297876267961728  }; 
+        // The map, centered at Cobh
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: Cobh,
+        });
+        // The marker, positioned at Cobh
+        const marker = new google.maps.Marker({
+          position: Cobh,
+          map: map,
+        });
+      }
+      initMap()
+    }
+  
 
     // Manage the display of favorite forms to ensure users can only add meals to their 'favorites' once //
 
