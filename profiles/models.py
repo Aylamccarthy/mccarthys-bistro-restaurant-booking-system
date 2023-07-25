@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    diet = models.TextField(blank=True, related_name="dietary requirements")
-    allergies = models.TextField(blank=True, related_name="food allergies")
-    favorites = models.TextField(blank=True, related_name="favorite meals")
+    dietary_requirements = models.TextField(blank=True, name="dietary requirements")
+    food_allergies = models.TextField(blank=True, name="food allergies")
+    favorite_meals = models.TextField(blank=True, name="favorite meals")
 
     def __Str__(self):
         return self.user.username
