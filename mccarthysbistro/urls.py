@@ -29,5 +29,5 @@ urlpatterns = [
     path('accounts/logout/', logout, name='account_logout'),
     path('menu/', include('menu.urls'), name='menu'),
     path('contact/', include('contact.urls'), name='contact'),
-     path('profiles/', include('profiles.urls'), name='profiles'),
+    path('profiles/', include('profiles.urls'), name='profiles'),
 ]
