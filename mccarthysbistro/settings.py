@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'booking',
     'menu',
     'contact',
+    'profiles',
 
     # Others
     'crispy_forms',
