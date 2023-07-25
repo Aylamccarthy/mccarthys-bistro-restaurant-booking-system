@@ -7,14 +7,14 @@
         <div class="center-container profile">
             <h2>Welcome back, {{ user.first_name }}</h2>
             <small>{{ user.email }}</small><br><br>
+            <h3>Update Profile</h3>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token  %}
+                {{form.as_p}}
+                <button type="submit">Update Profile</button>
+            </form>
         </div>
     </div>
 </div>
-<div>
-    <h3>Update Profile</h3>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token  %}
-        {{form.as_p}}
-        <button type="submit">Update Profile</button>
-    </form>
-</div>
+
+{% endblock %}
