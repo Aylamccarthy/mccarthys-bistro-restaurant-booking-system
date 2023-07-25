@@ -6,8 +6,9 @@ class ProfileForm(forms.ModelForm):
     """Form to create and update user profile"""
     class Meta:
         model = Profile
-        fields = ('dietary_requirements', 'food_allergies')
+        fields = ('name', 'dietary_requirements', 'food_allergies')
         labels = {
+            "name": "Name",
             "dietary_requirements": "Dietary Requirements",
             "food_allergies": "Food Allergies",
         }
