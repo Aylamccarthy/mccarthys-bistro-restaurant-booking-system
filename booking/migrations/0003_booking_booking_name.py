@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='booking',
             name='booking_name',
-            field=models.CharField(default='Ayla', max_length=40),
+            field=models.CharField(default='Ayla', max_length=40), 
+            preserve_default=False,
         ),
     ]
