@@ -31,6 +31,7 @@ class Booking(models.Model):
     customer = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_customer"
     )
+    booking_name = models.CharField(max_length=25)
     booked_table = models.ForeignKey(
         Table, on_delete=models.CASCADE, related_name="booking_table"
     )
