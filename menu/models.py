@@ -13,3 +13,4 @@ class Menu(models.Model):
     name = models.CharField(max_length=100, unique=True)
     price = models.FloatField()
     ingredients = models.CharField(max_length=1000)
+    cover = CloudinaryField('image', default='https://res.cloudinary.com/aylamccarthy/image/upload/v1690467352/pexels-dana-tentis-725991_dj1rmi.jpg')
