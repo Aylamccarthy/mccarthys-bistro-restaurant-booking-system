@@ -16,5 +16,5 @@ class Menu(admin.ModelAdmin):
         'name',
         'price',
         'ingredients',
-        'img_url',
+        'cover',
     )
