@@ -9,6 +9,7 @@ from .models import Menu
 
 
 class MenuListView(ListView):
-    """ View menu list """
+    """View menu list"""
+
     model = Menu
-    template_name = 'menu.html'
+    template_name = "menu.html"

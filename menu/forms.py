@@ -11,9 +11,9 @@ class MenuForm(forms.ModelForm):
     class Meta:
         model = Menu
         fields = ["name", "cover", "price", "ingredients"]
-        
+
         labels = {
-            'name': 'Dish Name',
+            "name": "Dish Name",
             "cover": "Image URL",
             "price": "Price",
             "ingredients": "Ingredients",

@@ -7,15 +7,15 @@ from django.dispatch import receiver
 
 def update_profile(request):
     """View to handle profile update"""
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProfileForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect("profile")
     else:
         form = ProfileForm(instance=request.user)
 
-    return render(request, 'profile.html', {'form': form})
+    return render(request, "profile.html", {"form": form})
 
 
 @receiver(post_save, sender=User)
@@ -27,5 +27,3 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
-
-

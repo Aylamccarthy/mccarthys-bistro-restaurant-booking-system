@@ -140,9 +140,12 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 
 
 ## Credits
+- Daisy McGirr Django Project Youtube Tutorials (https://www.youtube.com/watch?v=cPfvhpdYaNY&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
 - <a href="https://www.freepik.com/free-photo/table-set-dinning-table_1241148.htm#query=bistro%20restaurant&position=7&from_view=keyword&track=ais">Image by topntp26</a> on 
 - © <a href='https://www.123rf.com/profile_virtosmedia'>virtosmedia</a>, <a href='https://www.123rf.com/free-images/'>123RF Free Images</a>
 - https://www.youtube.com/watch?v=Alua227cOmY Used for extending the User model by creating a Profile app
+- pexels.com
+- How to create the Profile app inspiration can be found here: (https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2)
 ### Code
 
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )

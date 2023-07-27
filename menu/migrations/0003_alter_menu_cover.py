@@ -5,15 +5,20 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('menu', '0002_menu_cover'),
+        ("menu", "0002_menu_cover"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='menu',
-            name='cover',
-            field=cloudinary.models.CloudinaryField(blank=True, default='none', max_length=255, null=True, verbose_name='image'),
+            model_name="menu",
+            name="cover",
+            field=cloudinary.models.CloudinaryField(
+                blank=True,
+                default="none",
+                max_length=255,
+                null=True,
+                verbose_name="image",
+            ),
         ),
     ]

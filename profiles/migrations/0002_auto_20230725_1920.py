@@ -4,32 +4,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('profiles', '0001_initial'),
+        ("profiles", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='profile',
-            name='dietary requirements',
+            model_name="profile",
+            name="dietary requirements",
         ),
         migrations.RemoveField(
-            model_name='profile',
-            name='favorite meals',
+            model_name="profile",
+            name="favorite meals",
         ),
         migrations.RemoveField(
-            model_name='profile',
-            name='food allergies',
+            model_name="profile",
+            name="food allergies",
         ),
         migrations.AddField(
-            model_name='profile',
-            name='dietary_requirements',
+            model_name="profile",
+            name="dietary_requirements",
             field=models.CharField(blank=True, max_length=200),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='food_allergies',
+            model_name="profile",
+            name="food_allergies",
             field=models.CharField(blank=True, max_length=200),
         ),
     ]

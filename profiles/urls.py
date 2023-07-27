@@ -8,5 +8,5 @@ from . import views
 
 
 urlpatterns = [
-    path('profiles/', views.update_profile, name='update_profile'),
+    path("profiles/", views.update_profile, name="update_profile"),
 ]

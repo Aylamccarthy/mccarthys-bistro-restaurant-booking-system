@@ -10,7 +10,13 @@ from django.conf import settings
 
 class Menu(models.Model):
     """Model to create a menu"""
+
     name = models.CharField(max_length=100, unique=True)
     price = models.FloatField()
     ingredients = models.CharField(max_length=1000)
-    cover = CloudinaryField('image', default='none', null=True, blank=True)
+    cover = CloudinaryField(
+        "image",
+        default="none",
+        null=True,
+        blank=True,
+    )

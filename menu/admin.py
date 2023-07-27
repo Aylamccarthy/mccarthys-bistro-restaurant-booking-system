@@ -11,10 +11,11 @@ from menu.models import Menu
 # Register your models here.
 @admin.register(Menu)
 class Menu(admin.ModelAdmin):
-    """ Class to display menu items on admin """
+    """Class to display menu items on admin"""
+
     list_display = (
-        'name',
-        'price',
-        'ingredients',
-        'cover',
+        "name",
+        "price",
+        "ingredients",
+        "cover",
     )

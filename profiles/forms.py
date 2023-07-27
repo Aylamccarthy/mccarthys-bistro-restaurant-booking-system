@@ -4,9 +4,10 @@ from .models import Profile
 
 class ProfileForm(forms.ModelForm):
     """Form to create and update user profile"""
+
     class Meta:
         model = Profile
-        fields = ('name', 'dietary_requirements', 'food_allergies')
+        fields = ("name", "dietary_requirements", "food_allergies")
         labels = {
             "name": "Name",
             "dietary_requirements": "Dietary Requirements",
