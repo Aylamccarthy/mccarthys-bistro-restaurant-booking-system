@@ -83,10 +83,6 @@ main {
 }
 
 /* ----------------------GENERAL STYLES----------------------------- */
-.burlywood {
-    color: burlywood;
-}
-
 .flex {
 
     display: flex;
@@ -891,7 +887,7 @@ footer i:hover {
     }
 }
 
-/* --------------------------------------------------- SMALL AND MEDIUM DEVICES------------------------------------------------------------------*/
+/* ----------------------------------------------------- MEDIUM DEVICES------------------------------------------------------------------*/
 @media (max-width: 992px) {
     /* ----------------------NAVBAR----------------------------- */
     body {
@@ -995,10 +991,25 @@ footer i:hover {
         width: 91%;
     }
 
+    /* -----------------------403, 404, 500 PAGE---------------------------- */
+    .custom-error .error-logo {
+        height: 122px;
+        line-height: 122px;
+    }
+
+    .custom-error .error-logo h1 {
+        font-size: 122px;
+    }
+
+    .custom-error p {
+        padding: 5px;
+    }
+
     /* -----------------------MENU PAGE---------------------------- */
     .meal-header {
         flex-direction: column;
     }
+
 
 
 

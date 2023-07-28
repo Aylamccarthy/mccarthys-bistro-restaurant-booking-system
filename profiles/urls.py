@@ -8,5 +8,7 @@ from . import views
 
 
 urlpatterns = [
-    path("profiles/", views.update_profile, name="update_profile"),
+    path("profiles/", views.Profile, name="profile"),
+   # path("edit_profile", views.EditProfile, name="edit_profile")
+
 ]

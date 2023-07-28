@@ -14,11 +14,10 @@ class Profile(models.Model):
     food_allergies = models.CharField(blank=True, max_length=200)
 
     def __Str__(self):
-        return str(self.name)
+        return str(self.user)
 
 
 @receiver(post_save, sender=User)
-def create_user_profile(instance, created, **kwargs):
-    """Create or update the user profile"""
+def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
