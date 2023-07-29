@@ -31,6 +31,6 @@ def update_profile(request):
 def delete_profile(request):
     """View to handle profile deletion"""
     if request.method == 'POST':
-        request.user.delete():
+        request.user.delete()
         messages.success(request, 'Your profile has been successfully deleted.')
         return redirect('home')

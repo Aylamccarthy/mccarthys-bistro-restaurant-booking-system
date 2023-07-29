@@ -146,6 +146,7 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 - https://www.youtube.com/watch?v=Alua227cOmY Used for extending the User model by creating a Profile app
 - pexels.com
 - How to create the Profile app inspiration can be found here: (https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2)
+- Update and Delete User Profile Model taken and modified to suit the app needs, here: ( https://www.youtube.com/watch?v=F5kTZdi_c5k&t=151s)
 ### Code
 
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
