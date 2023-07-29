@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title%}Profile - {{profile.user.username}}{% endblock %}
+
+{% block content %}
+
+<div class="row content col-10 col-lg-9">
+    <div class="center-container scroll min-h-100 p-4">
+        <div class="center-container profile">
+            <h2>Delete profile</h2>
+            <p>Are you sure you want to delete your profile?</p>
+            <form method="POST"  enctype="multipart/form-data">
+                {% csrf_token  %}
+                {{form|crispy}}
+                
+                <button type="submit" class="btn btn-outline-secondary">Yes, delete my profile.</button>
+                <b></b>
+                <a href="{% url 'profile' %}" class="btn btn-outline-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    
+</div>
+{% endblock %}

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .forms import ProfileForm
 from .models import Profile
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def profile(request):
@@ -26,35 +27,10 @@ def update_profile(request):
     return render(request, 'profile.html', {'form': form})
 
 
-
-
-
-
-
-
-
-
-# def Profile(request):
-#     """View to handle profile update"""
-#     if request.method == "POST":
-#         form = ProfileForm(request.POST, request.FILES, instance=request.user)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request, ('Your profile has been updated.'))
-#             return redirect("profile")
-#     else:
-#         form = ProfileForm(instance=request.user)
-
-#     return render(request, "profile.html", {"form": form})
-
-
-# def update_profile(request):
-#     if request.user.is_authenticated:
-#         current_user = User.objects.get(id=request.user.id)
-#         form = ProfileForm(request.POST or None, instance=current_user)
-#         return render(request, "update_profile.html", {"form": form})
-#     else:
-#         messages.success(request, ("You must be logged in to view this page."))
-#         return redirect('home')
-
-
+@login_required
+def delete_profile(request):
+    """View to handle profile deletion"""
+    if request.method == 'POST':
+        request.user.delete():
+        messages.success(request, 'Your profile has been successfully deleted.')
+        return redirect('home')
