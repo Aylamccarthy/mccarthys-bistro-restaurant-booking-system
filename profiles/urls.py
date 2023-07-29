@@ -10,4 +10,5 @@ from . import views
 urlpatterns = [
     path("profile", views.profile, name="profile"),
     path("profile/profile", views.update_profile, name="update_profile"),
+    path("profile/profile", views.delete_profile, name="delete_profile"),
 ]
