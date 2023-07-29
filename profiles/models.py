@@ -14,7 +14,7 @@ class Profile(models.Model):
     food_allergies = models.CharField(blank=True, max_length=200)
 
     def __Str__(self):
-        return str(self.user)
+        return str(self.user.name)
 
 
 @receiver(post_save, sender=User)
