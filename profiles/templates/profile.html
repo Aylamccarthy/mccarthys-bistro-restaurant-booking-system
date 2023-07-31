@@ -10,18 +10,16 @@
         <div class="center-container profile">
             <h2>Welcome back,</h2>
             <small>{{ user.email }}</small><br><br> 
-            <a href="{% url 'update_profile' %}" class="btn btn-outline-secondary">Update Profile</a>
+            <a href="{% url 'update_profile' %}" class="btn btn-outline-secondary">View Your Profile</a>
             <a href="{% url 'delete_profile' %}" class="btn btn-outline-danger">Delete Profile</a>
             <b></b>
             <form method="POST"  enctype="multipart/form-data">
                 {% csrf_token  %}
                 {{form|crispy}}
                 
-                <button type="submit" class="btn btn-outline-secondary">Save Profile</button>
-            </form>
-            <b></b>
-            <a href="{% url 'profile' %}" class="btn btn-outline-secondary">Cancel</a>
-
+                <button type="submit" class="btn btn-outline-secondary">Update Profile</button> 
+                <a href="{% url 'profile' %}" class="btn btn-outline-secondary">Cancel</a>
+            </form>      
         </div>
     </div>
 </div>
