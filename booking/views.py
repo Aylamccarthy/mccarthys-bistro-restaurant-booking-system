@@ -78,6 +78,7 @@ class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteV
     """A view to delete a booking"""
 
     model = Booking
+    template_name = "booking/delete_booking.html"
     success_url = "/booking/managebookings"
 
     def test_func(self):
