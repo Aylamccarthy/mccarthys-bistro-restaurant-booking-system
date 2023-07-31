@@ -578,8 +578,14 @@ input[type=checkbox]:hover {
 .meal img {
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
+.dish>img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  /* https://www.w3schools.com/css/css3_object-fit.asp */
 
+}
 .meal>div {
     padding: 0px 5px 0px 0px;
     margin-bottom: 5px;

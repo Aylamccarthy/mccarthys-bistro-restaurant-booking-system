@@ -150,5 +150,7 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 ### Code
 
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
+- Resizing Images (https://www.w3schools.com/css/css3_object-fit.asp)
+- Inspiration for reviews app was taken from and modified from here: (https://github.com/Code-Institute-Solutions/PP4_masterclass/tree/main)
 
 Black - Black is a PEP 8 compliant opinionated formatter. Used to format code.
