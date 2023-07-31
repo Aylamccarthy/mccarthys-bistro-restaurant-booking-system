@@ -4,7 +4,7 @@ Review App - Forms
 Forms for Review App.
 """
 from django import forms
-from review.models import Review
+from reviews.models import Review
 
 
 class ReviewForm(forms.ModelForm):

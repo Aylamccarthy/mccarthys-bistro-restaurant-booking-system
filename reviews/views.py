@@ -10,8 +10,8 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import UserPassesTestMixin
-from review.forms import ReviewForm
-from users.models import User
+from reviews.forms import ReviewForm
+from .models import User
 from .models import Review as ReviewModel
 
 
@@ -33,7 +33,7 @@ class Review(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['review_form'] = ReviewForm
-        context['update_review_form'] = UpdateReviewForm
+        # context['update_review_form'] = UpdateReviewForm (have yet to do this view)
         context['reviews'] = ReviewModel.objects.all()
         context['users'] = User.objects.all()
         return context
