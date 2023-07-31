@@ -6,6 +6,7 @@ Models for Reviews App.
 import datetime
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
 
 
 class Review(models.Model):
@@ -18,8 +19,7 @@ class Review(models.Model):
     date_updated_on = models.DateTimeField(
         default=now.strftime("%Y-%m-%d %H:%M:%S"))
     author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
-        to_field='email', blank=True)
+        User, on_delete=models.CASCADE, blank=True)
 
     class Meta:
         ordering = ["date_updated_on"]
