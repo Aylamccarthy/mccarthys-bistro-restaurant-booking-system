@@ -14,7 +14,7 @@
             <a href="{% url 'delete_profile' %}" class="btn btn-outline-danger">Delete Profile</a>
             <b></b>
             <div class="input-container">
-            <form method="POST"  enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token  %}
                 {{form|crispy}}
                 
