@@ -351,123 +351,43 @@ main {
     }
 }
 
-/* ----------------------BOOKINGS PAGE------------------------------*/
-.p-center{
-    margin: 0 auto;
-}
+/* ----------------------PROFILE PAGE----------------------------- */
+.profile{
+    text-align: center;
+    background-color: #140c08b0;
+    padding: 50px 20px;
+    color: antiquewhite;
 
-.btn{
-    letter-spacing: 1.5px;
+    box-shadow: #ffffff 0px 0px 0px 2px,
+        rgb(70 42 28) 0px 0px 0px 6px,
+        #482b1d 0px 0px 0px 9px,
+        rgb(70 42 29) 0px 0px 0px 12px,
+        #ffffff 0px 0px 0px 14px;
 
-}
-.btn:hover{
-    color: black;
-}
-
-.form-control {
-    border: 2px solid #c2c4c6;
-    padding: 1px 2px;
-
-    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
     position: relative;
+    left: 30%;
+    overflow: auto;
+
 }
 
-.form-control input:hover{
-    cursor: pointer;
+/* ----------------------BOOKINGS PAGE------------------------------*/
+.booking{
+    text-align: center;
+    background-color: #140c08b0;
+    padding: 50px 20px;
+    color: antiquewhite;
+
+    box-shadow: #ffffff 0px 0px 0px 2px,
+        rgb(70 42 28) 0px 0px 0px 6px,
+        #482b1d 0px 0px 0px 9px,
+        rgb(70 42 29) 0px 0px 0px 12px,
+        #ffffff 0px 0px 0px 14px;
+
+    position: relative;
+    left: 30%;
+    overflow: auto;
+
 }
-
-.form-control:focus{
-
-    border: 2px solid #c2c4c6;
-    box-shadow: none;
-}
-
-input::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-  }
-
-input[type="number" i] {
-    padding: 0px;
-}
-
-#flexButtons{
-    width: fit-content;
-}
-
-#flexButtons button{
-    margin: 0px 10px;
-}
-
-.messages{
-    list-style-type: none;
-    padding: 0px;
-}
-.alert {
-
-    animation: autoHide 0s ease-in 2s forwards;
-}
-
-@keyframes autoHide {
-    to {
-        width:0;
-        height:0;
-        padding: 0px;
-        border: 0px;
-        overflow:hidden;
-    }
-}
-
-input[type=checkbox] {
-    transform: scale(1.5);
-}
-
-input[type=checkbox]:hover {
-    cursor: pointer;
-}
-
-#overviewCollapse>span:first-of-type{
-    color: #ddeda9;
-}
-
-#flexButtons{
-    width: fit-content;
-}
-
-#flexButtons button{
-    margin: 0px 10px;
-}
-
-.messages{
-    list-style-type: none;
-    padding: 0px;
-}
-.alert {
-
-    animation: autoHide 0s ease-in 2s forwards;
-}
-
-@keyframes autoHide {
-    to {
-        width:0;
-        height:0;
-        padding: 0px;
-        border: 0px;
-        overflow:hidden;
-    }
-}
-
-input[type=checkbox] {
-    transform: scale(1.5);
-}
-
-input[type=checkbox]:hover {
-    cursor: pointer;
-}
-
-#overviewCollapse>span:first-of-type{
-    color: #ddeda9;
-}
-
 
 /* ----------------------TEXT DECORATION----------------------------- */
 .decorated {
@@ -602,12 +522,6 @@ input[type=checkbox]:hover {
     font-size: x-large;
     margin-left: 5px;
 }
-
-.meal>div {
-    padding: 0px 5px 0px 0px;
-    margin-bottom: 5px;
-}
-
 
 /*-----------CONTACT PAGE---------------*/
 .timetable{

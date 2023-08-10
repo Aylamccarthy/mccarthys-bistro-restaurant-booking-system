@@ -8,15 +8,19 @@
 
 {% block content %}
 <!------Create Booking Form------->
-<div class="m-3">
-    <form method="POST" action="{% url 'createbooking' %}" class="form mb-2 p-2" enctype="multipart/form-data">
-        <h1 class="text-center">Create a Booking</h1>
-        {% csrf_token %}
-        {{ form|crispy }}
-        {{ form.media }}
-        <button type="submit" class="btn green-btn">Create</button>
-    </form>
-</div>
+<div class="row content col-10 col-lg-9">
+    <div class="center-container auto min-h-100 p-4">
+        <div class="booking">
+            <form method="POST" action="{% url 'createbooking' %}" class="form mb-2 p-2" enctype="multipart/form-data">
+                <h1 class="text-center">Create a Booking</h1>
+                {% csrf_token %}
+                {{ form|crispy }}
+                {{ form.media }}
+                <button type="submit" class="btn authenticate-link">Create</button>
+            </form>
+        </div>
+    </div>
+</div>      
 
 {% endblock %}
 

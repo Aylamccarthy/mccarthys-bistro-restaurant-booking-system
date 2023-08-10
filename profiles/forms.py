@@ -9,7 +9,7 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ("name", "dietary_requirements", "food_allergies")
         labels = {
-            "name": "Name",
-            "dietary_requirements": "Dietary Requirements",
-            "food_allergies": "Food Allergies",
+            "name": "Name:",
+            "dietary_requirements": "Dietary Requirements:",
+            "food_allergies": "Food Allergies:",
         }
