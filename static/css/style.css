@@ -392,6 +392,51 @@ main {
     color: antiquewhite;
 }
 
+
+
+/* -------------------------REVIEWS PAGE------------------------------*/
+.rating{
+    font-size: x-large;
+    margin-bottom: 15px;
+}
+
+.rating button:nth-child(1){
+    color: yellow;
+}
+
+.ratings-generated{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.star{
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: x-large;
+    padding: 0px;
+    transition: color 0.1s ease-in-out;
+}
+
+.review img{
+    height: 12vh;
+}
+
+.review h6{
+    text-transform: uppercase;
+}
+.review p{
+    text-align: justify;
+}
+
+.reviews-container{
+    margin-bottom: 20px;
+}
+
+.review-header small{
+    color: #ddeda9;
+}
+
+
 /* ----------------------TEXT DECORATION----------------------------- */
 .decorated {
     overflow: hidden;
@@ -526,7 +571,7 @@ main {
     margin-left: 5px;
 }
 
-/*-----------CONTACT PAGE---------------*/
+/*------------------------CONTACT PAGE--------------------------------*/
 .timetable{
     padding: 15px;
     border-radius: 20px;
@@ -566,7 +611,7 @@ main {
     width: 100%;
 }
 
-/*-----------LOGOUT MODAL---------------*/
+/*-----------------LOGOUT MODAL---------------------*/
 
 .modal {
     background-color: #00000052;
@@ -619,7 +664,7 @@ main {
     padding: 80px 0px;
 }
 
-/* -------------Footer---------------- */
+/* --------------------Footer----------------------- */
 footer{
     flex-shrink: 0;
 }
@@ -855,6 +900,29 @@ footer i:hover {
     .form-submit:hover {
         background-color: antiquewhite;
     }
+
+/*--------REVIEW PAGE---------------*/ 
+    .reviews-main-container{
+        flex-direction: column-reverse;
+    }
+
+    .review-header{
+        flex-direction: column;
+    }
+    .review h6{
+        text-align: left;
+    }
+
+    .reviews-container>div{
+        height: 48vh;
+    }
+
+    .review img {
+        height: 8vh;
+    }
+
+
+
 
 /*--------CUSTOM ERROR PAGES---------*/
     .custom-error .error-logo {
