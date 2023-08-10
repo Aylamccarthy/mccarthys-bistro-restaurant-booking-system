@@ -14,14 +14,14 @@
             <a href="{% url 'delete_profile' %}" class="btn btn-outline-danger">Delete Profile</a>
             <b></b>
             <div class="input-container">
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token  %}
-                {{form|crispy}}
-                
-                <button type="submit" class="btn form-submit">Update Profile</button> 
-                <a href="{% url 'profile' %}" class="btn form-submit">Cancel</a>
-            </form>  
-            </div>    
+                <form method="POST"  enctype="multipart/form-data">
+                    {% csrf_token  %}
+                    {{form|crispy}}
+                    
+                    <button type="submit" class="btn form-submit">Update Profile</button> 
+                    <a href="{% url 'profile' %}" class="btn form-submit">Cancel</a>
+                </form>    
+           </div>
         </div>
     </div>
 </div>
