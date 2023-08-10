@@ -303,6 +303,43 @@ main {
     margin-bottom: 15px;
 }
 
+/* ----------------------BACK TO TOP BUTTON IN HOME PAGE----------------------------- */
+
+#btn-back-to-top {
+
+    margin: 30px auto;
+    border-radius: 50%;
+    width: auto;
+
+}
+
+
+#btn-back-to-top:focus,
+#btn-back-to-top:focus-visible {
+    outline: none;
+}
+
+.btn-simple {
+    border: 2px solid antiquewhite;
+    color: antiquewhite;
+    margin: 10px auto 30px;
+    background-color: vblack;
+}
+
+.btn-simple:hover {
+    background-color: black;
+
+    border: 2px solid rgb(249, 212, 163);
+    color: rgb(249, 212, 163);
+}
+
+.btn-simple:focus {
+    background-color: black;
+
+    border: 2px solid antiquewhite;
+    color: antiquewhite;
+}
+
 
 /* ----------------------REGISTER/LOGIN LINK ANIMATION----------------------------- */
 
