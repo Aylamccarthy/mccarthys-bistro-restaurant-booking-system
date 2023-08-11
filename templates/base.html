@@ -127,6 +127,15 @@
             </div>
           </div>
         </div>
+
+        {% if messages %}
+    <!-- messages -->
+    <div class="toasts">
+        {% for message in messages %}
+        {% include 'includes/toasts/toast.html' %}
+        {% endfor %}
+    </div>
+    {% endif %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
