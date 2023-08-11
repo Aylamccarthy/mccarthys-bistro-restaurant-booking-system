@@ -227,6 +227,7 @@ main {
 
 /* ----------------------HOME PAGE COVER----------------------------- */
 #home-background-container {
+    /*Taken and modified from https://www.w3schools.com/cssref/pr_background-image.php*/
     height: 90vh;
     background-image: url('https://res.cloudinary.com/aylamccarthy/image/upload/v1687872744/fettuccine-with-tomato-sauce-minced-meat-garnished-with-grated-parmesan_1_xklxa6.jpg');
     background-repeat: no-repeat;
@@ -244,12 +245,12 @@ main {
     background-color: var(--background);
 
 }
+/* ----------------------Button Link to Booking Page----------------------------- */
 .book-btn{
     border: 1px solid #fb5322;
     background-color: var(--green);
     padding: 8px;
     color: #ffffff;
-    width: 200px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
