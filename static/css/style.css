@@ -274,16 +274,13 @@ main {
 
 #fade-container {
     padding: 20px 12px;
-
     background-color: antiquewhite;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0.9;
     margin-bottom: 20px;
-
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -304,19 +301,18 @@ main {
 #about-us img {
     height: 44vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    margin-bottom: 15px;
 }
  
 #about-text{
+    background-color: antiquewhite;
     justify-content: center;
     padding: 20px 20px;
 }
 
-#about-us > h2 {
+#about-us h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
 
 }
 
@@ -706,6 +702,7 @@ main {
 
 /*------------------------CONTACT PAGE--------------------------------*/
 .timetable{
+    margin: 0 20px;
     padding: 15px;
     border-radius: 20px;
     background-color: rgb(74, 90, 92);
@@ -741,7 +738,13 @@ main {
 
 #map{
     height: 327px;
-    width: 100%;
+    width: 95%;
+    margin: 0 20px;
+    padding: 15px;
+}
+
+.contact h3 {
+    margin-top: 30px;
 }
 
 /*-----------------LOGOUT MODAL---------------------*/
@@ -1032,6 +1035,11 @@ footer i:hover {
     
     .form-submit:hover {
         background-color: antiquewhite;
+    }
+
+ /* -----------------------WHERE TO FIND US PAGE---------------------------- */
+    .contact-responsive {
+        flex-direction: column;
     }
 
 /*--------REVIEW PAGE---------------*/ 
