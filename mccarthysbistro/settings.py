@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu103.gitpod.io', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu102.gitpod.io']
 
 
 # Application definition
