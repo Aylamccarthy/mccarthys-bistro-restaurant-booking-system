@@ -2,6 +2,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Booking, Table
 from .forms import BookingForm
+from django.views.generic import DeleteView, CreateView, UpdateView, ListView
 
 
 class CreateBookingView(LoginRequiredMixin, generic.CreateView):
@@ -80,6 +81,14 @@ class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteV
     model = Booking
     template_name = "booking/delete_booking.html"
     success_url = "/booking/managebookings"
+
+    def form_valid(self, form):
+        """ Display toast message on form success """
+        messages.success(
+            self.request,
+            'Successfully deleted booking'
+        )
+        return super(DeleteBookingView, self).form_valid(form)
 
     def test_func(self):
         if self.request.user.is_staff:
