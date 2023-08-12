@@ -695,7 +695,7 @@ main {
     object-fit: contain;
 }
 .dish>img {
-    padding-right: 30px;
+    padding-right: 1px;
     width: 100%;
     height: auto;
     object-fit: contain;  /* https://www.w3schools.com/css/css3_object-fit.asp */

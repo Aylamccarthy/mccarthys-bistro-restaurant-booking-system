@@ -105,6 +105,9 @@ To create a website for McCarthy's Bistro restaurant that will be beneficial for
 
 
 
+
+
+
 ## Agile Methodology
 This project was developed utilising the Agile Methodogy.<br>
 This is the first time I used Agile methodology when planning full-stack django website with a focus on delivering the basic app functionalities. I prioritized features by labeling them as "must-have" or "could-have" and moved some less critical ones to future development. To guide my development process, I created user stories for both the admin/staff user and guests/clients/customers. These stories helped to define the features and functionalities that were most important to project's target audience.
