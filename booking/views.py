@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Booking, Table
 from .forms import BookingForm
 from django.views.generic import DeleteView, CreateView, UpdateView, ListView
+from django.contrib import messages
 
 
 class CreateBookingView(LoginRequiredMixin, generic.CreateView):
@@ -39,6 +40,12 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
                 lowest_capacity_table = table
         print(f"lowest_capacity_table is : {lowest_capacity_table}")
         form.instance.booked_table = lowest_capacity_table
+
+        messages.success(
+            self.request,
+            f'Booking confirmed for {date} at {time}'
+        )
+
         return super(CreateBookingView, self).form_valid(form)
 
 

@@ -78,4 +78,6 @@ if (window.location.pathname.includes('/reviews/')) {
     })
   }
 }
-  
+
+//-----Initialize toast------//
+$('.toast').toast(option)

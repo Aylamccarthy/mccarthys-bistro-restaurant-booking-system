@@ -494,13 +494,15 @@ main {
         #ffffff 0px 0px 0px 14px;
 
     position: relative;
-    left: 30%;
+    left: 20%;
     overflow: auto;
 
 }
 
 /* ----------------------BOOKINGS PAGE------------------------------*/
 .booking{
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: #140c08b0;
     padding: 50px 20px;
@@ -520,6 +522,24 @@ main {
 .table{
     color: antiquewhite;
 }
+
+/*------------ Bootstrap toast----------- */
+.toasts {
+    position: fixed;
+    top: 127px;
+    right: 0px;
+    z-index: 99999999999;
+    width: 300px;
+}
+
+.toasts .toast {
+    background: #ddc439;
+}
+
+.toast-body {
+    font-size: 1rem;
+}
+
 
 
 
