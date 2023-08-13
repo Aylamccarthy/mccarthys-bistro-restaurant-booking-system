@@ -1079,8 +1079,6 @@ footer i:hover {
     }
 
 
-
-
 /*--------CUSTOM ERROR PAGES---------*/
     .custom-error .error-logo {
         height: 122px;
@@ -1159,6 +1157,12 @@ footer i:hover {
     }
     .dish>img{
         margin-left: 80px;
+    }
+
+    /* -----------------------BOOKING PAGE---------------------------- */
+    .booking .table{
+        min-height: 80vh;
+        width: 91%;
     }
 
 
