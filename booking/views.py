@@ -42,8 +42,7 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
         form.instance.booked_table = lowest_capacity_table
 
         messages.success(
-            self.request,
-            f'Booking confirmed for {guests} guests on {date}'
+            self.request, f"Booking confirmed for {guests} guests on {date}"
         )
 
         return super(CreateBookingView, self).form_valid(form)
@@ -76,14 +75,13 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
     model = Booking
 
     def form_valid(self, form):
-        date = form.cleaned_data['booking_date']
-        time = form.cleaned_data['booking_time']
-        guests = form.cleaned_data['number_of_guests']
-        tables_with_capacity = list(Table.objects.filter(
-            capacity__gte=guests
-        ))
+        date = form.cleaned_data["booking_date"]
+        time = form.cleaned_data["booking_time"]
+        guests = form.cleaned_data["number_of_guests"]
+        tables_with_capacity = list(Table.objects.filter(capacity__gte=guests))
         bookings_on_requested_date = Booking.objects.filter(
-            booking_date=date, booking_time=time)
+            booking_date=date, booking_time=time
+        )
         for booking in bookings_on_requested_date:
             for table in tables_with_capacity:
                 if table.table_number == booking.booked_table.table_number:
@@ -97,8 +95,7 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
             form.instance.booked_table = lowest_capacity_table
 
         messages.success(
-            self.request,
-            f'Successfully updated booking for {guests} guests on {date}'
+            self.request, f"Successfully updated booking for {guests} guests on {date}"
         )
 
         return super(EditBookingView, self).form_valid(form)
@@ -118,11 +115,8 @@ class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteV
     success_url = "/booking/managebookings"
 
     def form_valid(self, form):
-        """ Display toast message on form success """
-        messages.success(
-            self.request,
-            'Successfully deleted booking'
-        )
+        """Display toast message on form success"""
+        messages.success(self.request, "Successfully deleted booking")
         return super(DeleteBookingView, self).form_valid(form)
 
     def test_func(self):
