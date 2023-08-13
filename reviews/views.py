@@ -67,7 +67,8 @@ class Review(ListView):
 
             messages.error(
                 request,
-                "There was a problem submiting your review." + "Please try again!",
+                "There was a problem submiting your review."
+                + "Please try again!",
             )
             return HttpResponseRedirect("/reviews")
         update_review_form = UpdateReviewForm(request.GET)
@@ -97,12 +98,12 @@ class ReviewUpdate(UserPassesTestMixin, UpdateView):
     def post(self, request, pk):
         review = get_object_or_404(ReviewModel, pk=pk)
         if request.method == "POST":
-            update_review_form = UpdateReviewForm(data=request.POST, instance=review)
+            update_review_form = UpdateReviewForm(data=request.POST,
+                                                  instance=review)
 
             if update_review_form.is_valid():
-                update_review_form.instance.date_updated_on = datetime.now().strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
+                update_review_form.instance.date_updated_on = 
+                    datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
                 review = ReviewModel()
                 update_review_form.save()

@@ -15,8 +15,10 @@ class Review(models.Model):
     rate = models.PositiveSmallIntegerField()
     review_text = models.TextField()
     now = datetime.datetime.now()
-    date_created_on = models.DateTimeField(default=now.strftime("%Y-%m-%d %H:%M:%S"))
-    date_updated_on = models.DateTimeField(default=now.strftime("%Y-%m-%d %H:%M:%S"))
+    date_created_on = models.DateTimeField(default=now.strftime
+                                           ("%Y-%m-%d %H:%M:%S"))
+    date_updated_on = models.DateTimeField(default=now.strftime
+                                           ("%Y-%m-%d %H:%M:%S"))
     author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
 
     class Meta:

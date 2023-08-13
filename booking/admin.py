@@ -20,4 +20,5 @@ class BookingAdmin(admin.ModelAdmin):
         "booking_time",
     )
     search_fields = ["pk", "customer__username"]
-    list_filter = ("booking_time", "booked_table", ("booking_date", DateRangeFilter))
+    list_filter = ("booking_time",
+                   "booked_table", ("booking_date", DateRangeFilter))

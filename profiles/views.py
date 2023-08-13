@@ -19,7 +19,8 @@ def update_profile(request):
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your profile has been updated successfully")
+            messages.success(request,
+                             "Your profile has been updated successfully")
             return redirect("profile")
     else:
         form = ProfileForm(instance=profile)
@@ -32,5 +33,6 @@ def delete_profile(request):
     """View to handle profile deletion"""
     if request.method == "POST":
         request.user.delete()
-        messages.success(request, "Your profile has been successfully deleted.")
+        messages.success(request,
+                         "Your profile has been successfully deleted.")
         return redirect("home")

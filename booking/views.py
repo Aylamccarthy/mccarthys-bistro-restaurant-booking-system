@@ -63,7 +63,8 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
             return Booking.objects.filter(customer=self.request.user)
 
 
-class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
+class EditBookingView(LoginRequiredMixin, UserPassesTestMixin,
+                      generic.UpdateView):
     """
     A view to provide a Form to the user
     to edit a booking
@@ -95,7 +96,8 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
             form.instance.booked_table = lowest_capacity_table
 
         messages.success(
-            self.request, f"Successfully updated booking for {guests} guests on {date}"
+            self.request,
+            f"Successfully updated booking for {guests} guests on {date}"
         )
 
         return super(EditBookingView, self).form_valid(form)
@@ -107,7 +109,8 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
             return self.request.user == self.get_object().customer
 
 
-class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin,
+                        generic.DeleteView):
     """A view to delete a booking"""
 
     model = Booking
