@@ -317,6 +317,9 @@ main {
 
 }
 
+.cobh{
+    color: #0a0a0a;
+}
 /* ----------------------ARROWS ANIMATION IN HOMEPAGE----------------------------- */
 
 .arrows-link-container {
@@ -437,7 +440,7 @@ main {
 /* ----------------------REGISTER/LOGIN LINK ANIMATION----------------------------- */
 
 .bck-login {
-    background-color: #050301b3;
+    background-color: black;
     color: antiquewhite;
     letter-spacing: 2px;
     padding: 5px;
@@ -447,6 +450,7 @@ main {
 .bck-login p {
     margin: 0;
     font-size: 14px;
+    color: white;
 }
 
 
@@ -705,7 +709,13 @@ main {
     padding: 0px 5px 0px 0px;
     margin-bottom: 5px;
 }
-
+.menu-page{
+    background-color: black;
+    padding: 10px 30px;
+}
+.menu-p{
+    color: var(--white);
+}
 .heart{
     background-color: transparent;
     border: none;
