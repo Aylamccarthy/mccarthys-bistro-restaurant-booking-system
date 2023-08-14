@@ -709,12 +709,11 @@ main {
     padding: 0px 5px 0px 0px;
     margin-bottom: 5px;
 }
-.menu-page{
-    background-color: black;
-    padding: 10px 30px;
-}
+
 .menu-p{
     color: var(--white);
+    background-color: rgb(70 42 28);
+    padding: 0px 10px;
 }
 .heart{
     background-color: transparent;
@@ -1167,6 +1166,9 @@ footer i:hover {
     }
     .dish>img{
         margin-left: 100px;
+    }
+    .meal-name, .price, .ingredients{
+        padding-left: 30px;
     }
 
     /* -----------------------BOOKING PAGE---------------------------- */

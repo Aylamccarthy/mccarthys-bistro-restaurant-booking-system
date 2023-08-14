@@ -19,11 +19,11 @@
                     <div class="dish col-6 col-md-3 col-lg-2">
                         <img src="{{ meal.cover.url }}" alt="menu element">
                     </div>
-                    <div class="col-12 col-md-9 col-lg-10 overflow-h" >
+                    <div class=" menu-container col-12 col-md-9 col-lg-10 overflow-h" >
                         <div class="flex sp-between ">
                             <div class="flex meal-header">
-                                <h5>{{ meal.name }}</h5>
-                                <p class="green larger"><b>€{{ meal.price }}</b></p>
+                                <h5 class="meal-name">{{ meal.name }}</h5>
+                                <p class="price green larger"><b>€{{ meal.price }}</b></p>
                             </div>
                             {% if user.is_authenticated %}
                                 {% if not user.staff %}
@@ -60,7 +60,7 @@
                             {% endif %}
                         </div>
                         <div class="row">
-                            <p><b>Ingredients:</b> {{ meal.ingredients }}</p>
+                            <p class="ingredients"><b>Ingredients:</b> {{ meal.ingredients }}</p>
                         </div>
                         <div class="row">
                             <p>.....................................................................................................................................................................................................................</p>
