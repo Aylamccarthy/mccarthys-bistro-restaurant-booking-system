@@ -10,16 +10,16 @@
 <!-- Create Booking Form -->
 
 <div class="background-container">
-    <div class="auth-form col-lg-4">
-        <form class="login" method="POST" action="{% url 'createbooking' %}" cenctype="multipart/form-data">
-           <div class="input-container">
-               <h1 class="decorated">Create a Booking</h1>
-                {% csrf_token %}
-                {{ form|crispy }}
-                {{ form.media }}
-                <button type="submit" class="btn authenticate-link">Create</button>
-            </div>
-        </form>
+    <div class="auth-form col-11 col-lg-4">
+        <h2 class="decorated"><span>Create Booking</span></h2>
+        <div class="input-container">
+            <form class="login" method="POST" action="{% url 'createbooking' %}" class="form mb-2 p-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {{ form.media }}
+                    <button type="submit" class="btn authenticate-link">Create</button>
+            </form>
+        </div>
     </div>
  </div>     
 

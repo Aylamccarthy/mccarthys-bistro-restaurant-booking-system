@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {{ form.media }}
 
-{% block content %}
-<div class="row content col-10 col-lg-9">
-    <div class="center-container auto min-h-100 p-4">
-        <div class="booking">
-        <h1 class="text-center">Confirm Booking Deletion</h1>
-        <div class="d-flex justify-content-center pt-3">
+{% block content %}	
+
+<div class="background-container">
+    <div class="auth-form col-11 col-lg-4">
+        <h2 class="decorated"><span>Confirm Booking Deletion</span></h2>
+        <div class="input-container">
             <form method="post">
                 {% csrf_token %}
                 <p>Are you sure you want to delete Booking: "{{ object.pk }}"?</p>
