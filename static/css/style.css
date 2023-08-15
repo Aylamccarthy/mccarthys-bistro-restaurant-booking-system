@@ -440,7 +440,7 @@ main {
 /* ----------------------REGISTER/LOGIN LINK ANIMATION----------------------------- */
 
 .bck-login {
-    background-color: black;
+    background-color: rgb(70 42 28);
     color: antiquewhite;
     letter-spacing: 2px;
     padding: 5px;
@@ -1061,6 +1061,12 @@ footer i:hover {
     .form-submit:hover {
         background-color: antiquewhite;
     }
+
+/* -----------------------MENU PAGE---------------------------- */
+
+.dish>img{
+    margin-left: 20px;
+}
 
  /* -----------------------WHERE TO FIND US PAGE---------------------------- */
     .contact-responsive {
