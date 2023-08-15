@@ -5,15 +5,14 @@
 
 {% block content %}
 
-<div class="row content col-10 col-lg-9">
-    <div class="center-container auto min-h-100 p-4">
-        <div class="profile">
+<div class="background-container">	
+    <div class="auth-form col-11 col-lg-4">
             <h2>Welcome back,</h2>
             <small>{{ user.email }}</small><br><br> 
             <a href="{% url 'update_profile' %}" class="btn form-submit">View Your Profile</a>
             <b></b>
             <div class="input-container">
-                <form method="POST"  enctype="multipart/form-data">
+                <form class="login" method="POST"  enctype="multipart/form-data">
                     {% csrf_token  %}
                     {{form|crispy}}
                     
@@ -21,7 +20,6 @@
                     <a href="{% url 'profile' %}" class="btn form-submit">Cancel</a>
                 </form>    
            </div>
-        </div>
     </div>
 </div>
 <div>
