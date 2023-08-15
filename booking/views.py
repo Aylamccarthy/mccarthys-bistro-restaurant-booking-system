@@ -63,8 +63,8 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
             return Booking.objects.filter(customer=self.request.user)
 
 
-class EditBookingView(LoginRequiredMixin, UserPassesTestMixin,
-                      generic.UpdateView):
+class EditBookingView(LoginRequiredMixin,
+                      UserPassesTestMixin, generic.UpdateView):
     """
     A view to provide a Form to the user
     to edit a booking
@@ -109,8 +109,8 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin,
             return self.request.user == self.get_object().customer
 
 
-class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin,
-                        generic.DeleteView):
+class DeleteBookingView(LoginRequiredMixin,
+                        UserPassesTestMixin, generic.DeleteView):
     """A view to delete a booking"""
 
     model = Booking

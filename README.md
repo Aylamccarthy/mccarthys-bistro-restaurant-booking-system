@@ -8,7 +8,7 @@
 
 **[View live website here](https://)** :computer:
 
-![Program mockup]()
+![Program mockup](docs/img/wireframes/mccarthysbistro_mockup.png)
 
 
 # Table of Content

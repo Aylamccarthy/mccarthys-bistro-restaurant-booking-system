@@ -15,8 +15,8 @@ class BookingForm(forms.ModelForm):
         fields = ["booking_name", "number_of_guests",
                   "booking_date", "booking_time"]
         booking_date = forms.DateField(help_text="Date must be a future date")
-        widgets = {
-            "booking_date": forms.widgets.DateInput(attrs={"type": "date"})}
+        widgets = {"booking_date":
+                   forms.widgets.DateInput(attrs={"type": "date"})}
         labels = {
             "booking_name": "Name",
             "number_of_guests": "Number Of Guests",
@@ -62,7 +62,8 @@ class BookingForm(forms.ModelForm):
                 tables_with_capacity.append(table_booked)
         # Throw validation errors on form
         if date < datetime.today().date():
-            raise ValidationError("Invalid date - Booking cannot be in the past")
+            raise ValidationError
+            ("Invalid date - Booking cannot be in the past")
         if table_booked is not None:
             if not tables_with_capacity and table_booked.capacity < guests:
                 raise ValidationError(
