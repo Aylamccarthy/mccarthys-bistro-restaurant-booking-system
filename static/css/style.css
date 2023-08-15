@@ -54,7 +54,7 @@ main {
 }
 
 .form {
-    width: 50%;
+    width: 70%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
@@ -576,7 +576,7 @@ main {
 
 /* ----------------------LOGIN/REGISTER FORM----------------------------- */
 
-.auth-form {
+.auth-form, .booking{
     text-align: center;
     background-color: #140c08b0;
     padding: 50px 20px;
@@ -1066,11 +1066,6 @@ footer i:hover {
         color: antiquewhite;
         padding: 5px;
       }
-      /* -----------------------WHERE TO FIND US PAGE---------------------------- */
-    .contact-responsive {
-        flex-direction: column;
-    }
-
 }
 
    
@@ -1106,7 +1101,7 @@ footer i:hover {
         width: 100%;
     }
 
-    .auth-form {
+    .auth-form{
         min-height: 80vh;
         width: 91%;
     }
@@ -1141,6 +1136,7 @@ footer i:hover {
         min-height: 80vh;
         width: 91%;
     }
+
 
 
 
