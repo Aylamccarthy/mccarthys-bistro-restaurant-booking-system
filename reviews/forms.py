@@ -1,7 +1,7 @@
 """
-Review App - Forms
+Reviews App - Forms
 ----------------
-Forms for Review App.
+Forms for Reviews App.
 """
 from django import forms
 from reviews.models import Review

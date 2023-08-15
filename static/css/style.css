@@ -526,6 +526,8 @@ main {
     color: antiquewhite;
 }
 
+/*-----------REVIEWS PAGE-----------------*/
+
 /*------------ Bootstrap toast----------- */
 .toasts {
     position: fixed;
@@ -542,50 +544,6 @@ main {
 .toast-body {
     font-size: 1rem;
 }
-
-
-/* -------------------------REVIEWS PAGE------------------------------*/
-.rating{
-    font-size: x-large;
-    margin-bottom: 15px;
-}
-
-.rating button:nth-child(1){
-    color: yellow;
-}
-
-.ratings-generated{
-    margin-top: -10px;
-    margin-left: 10px;
-}
-.star{
-    background-color: transparent;
-    border: none;
-    color: gray;
-    font-size: x-large;
-    padding: 0px;
-    transition: color 0.1s ease-in-out;
-}
-
-.review img{
-    height: 12vh;
-}
-
-.review h6{
-    text-transform: uppercase;
-}
-.review p{
-    text-align: justify;
-}
-
-.reviews-container{
-    margin-bottom: 20px;
-}
-
-.review-header small{
-    color: #ddeda9;
-}
-
 
 /* ----------------------TEXT DECORATION----------------------------- */
 .decorated {
@@ -1105,6 +1063,7 @@ footer i:hover {
     }
 
     .custom-error p {
+        color: antiquewhite;
         padding: 5px;
       }
       /* -----------------------WHERE TO FIND US PAGE---------------------------- */
