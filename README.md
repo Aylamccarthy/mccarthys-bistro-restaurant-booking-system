@@ -1,12 +1,12 @@
 <h1 align="center"><strong>McCarthy's Bistro Website</strong></h1>
 
-<h3 align="center">Full-Stack Project (HTML5 CSS3, Bootstrap, Django, Python, JavaScript, jQuery, PostgreSQL, Cloudinary)</h3>
+<h3 align="center">Full-Stack Project (HTML5, CSS3, Bootstrap, Django, Python, JavaScript, jQuery, PostgreSQL, Cloudinary)</h3>
 
 <br>
 
 **Developer:** Ayla McCarthy
 
-**[View live website here](https://)** :computer:
+**[View live website here](https://mccarthys-bistro.herokuapp.com/)**  :computer:
 
 ![Program mockup](docs/img/wireframes/mccarthysbistro_mockup.png)
 
@@ -56,8 +56,6 @@ This is a project designed and developed to create a complete experience for the
 
 This project is very much a personal one. Having been in the hospitality industry for most of my career and having almost 15 years culinary experience, this website look exactly as how I imagine my dream restaurant located in my hometown would look like.
 
-Application offers such functionalities as:
-
 ## UX
 This site was created respecting the Five Planes Of Website Design:<br>
 ### Strategy<hr>
@@ -98,7 +96,48 @@ This site was created respecting the Five Planes Of Website Design:<br>
 
 
 **Project Goal:**<br>
-To create a website for McCarthy's Bistro restaurant that will be beneficial for both clients and staff members which aims to maximise clients/customers experience and ultimately maximising the restaurant's revenue.
+To create a website for McCarthy's Bistro restaurant that will be beneficial for both clients and staff members which aims to maximise clients/customers experience and staff productivity, ultimately maximising the restaurant's revenue.
+
+**Project Objectives:**<br> 
+* To create a website with a simple and intuitive User Experience design;
+* To add relevant content that aims to create a better image/branding of the restaurant;
+* To differentiate between client and staff member accounts;
+* To implement fully functional features that will ease the staff members' tasks and upgrade clients' experience with the restaurant services;
+* To make the website fully responsive, and available and functional on every device.<br><br>
+
+### Scope<hr>
+**Simple and intuitive User Experience**<br>
+* Ensure the navigation menu is visible and functional at every step;
+* Ensure every page has a suggestive name that fits its content;
+* Ensure the users will get visual cues and feedback when navigating through pages;
+* Create a design that  is clear, precise, engaging and matches the restaurant theme.
+
+**Relevant content**<br>
+* Add information about restaurant name, location and contact data;
+* Make a clear beautifully designed presentation of the menu elements;
+* Create a booking section that is easy to navigate;
+* Create a profile section that aims to address clients dietary requirements/requests.
+
+**Different client and staff member Accounts**<br>
+* Allow clients to add, update or delete bookings their own bookings;
+* Allow admin and staff members to add, update or delete bookings;
+* Allow admin and staff members to add, update or delete menu items;
+* Allow signed in clients access to Profile page;
+* Allow access to Manage Bookings page only for staff members type of users;
+
+**Responsiveness**<br>
+* Create a responsive design for desktop, tablet and mobile devices.<br><br>
+
+### Structure<hr>
+The structure of the website is divided into eight pages but with content depending on authentication and client/staff status <br>
+-**Register/Login** pages give the user the possibility to create an account and authenticate for accessing different features.<br>
+-**Logout** feature is a modal that helps user exit their current account;<br>
+-The **Home** page is visible for both types of users and includes details about the restaurant, and appropriate links to different pages;<br>
+-The **Menu** page displays menu details and a suggestive message for clients to inform the restaurant if they have any food allergies or special dietary requirements;<br>
+-The **Booking** page is only available for logged-in users, both clients and staff members;<br>
+-**Where to find us** contains  relevant information visible to all users;<br>
+-**Profile** page is only visible for the logged-in clients and give them possibility to request for any dietary requirements by editing their profile information;<br>
+_**Manage Bookings** page gives access only to staff members and displays all the bookings registered, with date, time, and number of guests information.<br>
 
 
 

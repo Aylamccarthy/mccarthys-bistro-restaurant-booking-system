@@ -489,7 +489,7 @@ main {
 .profile{
     text-align: center;
     background-color: #140c08b0;
-    padding: 10px 20px;
+    padding: 50px 20px;
     color: antiquewhite;
 
     box-shadow: #ffffff 0px 0px 0px 2px,
@@ -502,6 +502,10 @@ main {
     left: 20%;
     overflow: auto;
 
+}
+.profile-page{
+    background-image: 
+    
 }
 
 /* ----------------------BOOKINGS PAGE------------------------------*/
