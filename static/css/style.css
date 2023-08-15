@@ -865,7 +865,7 @@ footer i:hover {
     text-decoration: none;
     text-transform: uppercase;
     background: var(--green);
-    color: var(--black);
+    color: antiquewhite;
     border: 2px solid var(--black);
     display: inline-block;
     padding: 10px 25px;
