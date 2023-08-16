@@ -44,10 +44,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
             </div>
             <ul class="navbar-nav justify-content-end mobile-nav-style">
-              <li class="nav-item">
+              <li class="nav-item flex a-center">
+                <i class="fas fa-home d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
+                <i class="fas fa-utensils d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'menu' %}active{% endif %}" aria-current="page" href="{% url 'menu' %}">Menu</a>
               </li>
               {% if user.is_authenticated %}
@@ -55,13 +57,16 @@
                 <a class="nav-link {% if url_name == 'managebookings' %}active{% endif %}" aria-current="page" href="{% url 'managebookings' %}">Bookings</a>
               </li>
                 <li class="nav-item">
+                  <i class="fas fa-edit d-none d-lg-block"></i>
                   <a class="nav-link {% if url_name == 'booking' %}active{% endif %}" href="{% url 'createbooking' %}">Make a Booking</a>
                 </li>
               {% endif %}
               <li class="nav-item">
+                <i class="fas fa-map-marker-alt d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Where to find us</a>
               </li>
               <li class="nav-item">
+                <i class="fas fa-comments d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'reviews' %}active{% endif %}"  href="{% url 'reviews' %}">Reviews</a>
               </li>
 
@@ -79,13 +84,16 @@
               </li>
               {% endif %}
               <li class="nav-item">
+                <i class="fas fa-sign-in-alt d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'account_logout' %}active{% endif %}"  href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a>
               </li>
               {% else %}
               <li class="nav-item">
+                <i class="fas fa-sign-in-alt d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}"  href="{% url 'account_signup' %}">Register</a>
               </li>
               <li class="nav-item">
+                <i class="fas fa-sign-in-alt d-none d-lg-block"></i>
                 <a class="nav-link {% if url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
               </li>
               {% endif %}
