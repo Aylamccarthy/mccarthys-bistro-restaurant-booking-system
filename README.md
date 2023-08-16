@@ -139,9 +139,9 @@ The structure of the website is divided into eight pages but with content depend
 -**Profile** page is only visible for the logged-in clients and give them possibility to request for any dietary requirements by editing their profile information;<br>
 _**Manage Bookings** page gives access only to staff members and displays all the bookings registered, with date, time, and number of guests information.<br>
 
-* FLOWCHARTS
+* FLOWCHARTS <br>
 The Flowchart for my program was created using <b>LucidChart</b> and it visually represents how the system works.<br>
-[![N|Solid](static/mccarthysbistro/media/lucidflowchart.png)](static/mccarthysbistro/media/lucidflowchart.png)<br><br>
+[![N|Solid](static/mccarthysbistro/media/lucidflowchart.png)](static/mccarthysbistro/media/lucidflowchart.png)<br>
 
 
 
@@ -162,8 +162,8 @@ To keep track of progress,Github Projects. I used a kanban board divided into fo
 
 By using agile methodology, I was able to stay organized and focused on delivering the most important features, while also allowing flexibility for future development. This experience gave me valuable insight and lessons that I can apply to future projects.
 
-![agile]()
-![agile-boards]
+![agile](docs/img/agile.png)
+![agile-boards](docs/img/kanban.png)
 
 
 | Epic | Milestone | User stories |
