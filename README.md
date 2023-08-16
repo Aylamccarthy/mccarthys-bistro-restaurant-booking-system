@@ -139,6 +139,11 @@ The structure of the website is divided into eight pages but with content depend
 -**Profile** page is only visible for the logged-in clients and give them possibility to request for any dietary requirements by editing their profile information;<br>
 _**Manage Bookings** page gives access only to staff members and displays all the bookings registered, with date, time, and number of guests information.<br>
 
+* FLOWCHARTS
+The Flowchart for my program was created using <b>LucidChart</b> and it visually represents how the system works.<br>
+[![N|Solid](static/mccarthysbistro/media/lucidflowchart.png)](static/mccarthysbistro/media/lucidflowchart.png)<br><br>
+
+
 
 
 
