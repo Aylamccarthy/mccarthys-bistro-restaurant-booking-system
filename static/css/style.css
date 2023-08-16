@@ -530,9 +530,6 @@ main {
 }
 
 /*-----------REVIEWS PAGE-----------------*/
-.review-page{
-    background-color: #482b1d;
-}
 .rating{
     font-size: x-large;
     margin-bottom: 15px;
@@ -573,6 +570,29 @@ main {
 .review-header small{
     color: #ddeda9;
 }
+#updateReviewForm{
+    display: none;
+    text-align: left;
+}
+
+#myReview{
+    text-align: left;
+}
+
+#myReview p{
+    text-align: justify;
+}
+
+#myReview .ratings-generated{
+    margin-left: 0px;
+    margin-top: -5px;
+}
+
+#myReview small{
+   color: #ddeda9;
+
+}
+
 
 
 /*------------ Bootstrap toast----------- */
@@ -1183,6 +1203,12 @@ footer i:hover {
         min-height: 80vh;
         width: 91%;
     }
+
+     /* -----------------------REVIEWS PAGE---------------------------- */
+    .review img {
+        height: 6vh;
+    }
+
 
 
 

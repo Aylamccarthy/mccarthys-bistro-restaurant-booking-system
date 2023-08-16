@@ -44,3 +44,129 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 //-----Initialize toast------//
 $('.toast').toast(option)
+
+//-------Review Page--------//
+if (window.location.pathname.includes('/reviews/')) {
+  
+  if(user.value == "authenticated" && status.value == "client"){
+    const rating = document.getElementsByClassName('rating')[0];
+    const stars = rating.getElementsByTagName('button');
+    // console.log(window.getComputedStyle(document.getElementById('addReviewForm'), null).display == "block")
+    // console.log(window.getComputedStyle(document.getElementById('myReview'), null).display == "block")
+    var rateValue;
+      if(document.querySelector('#myReview'))
+    {
+      rateValue = document.querySelector('#updateRateValue');        
+    }
+    else{
+      rateValue = document.querySelector('#rateValue');
+    }
+      
+    const displayUpdateForm = document.querySelector('#displayUpdateForm');
+    const myReview = document.querySelector('#myReview');
+    const reviewExists = document.querySelector('#reviewExists');
+    const addReviewForm = document.querySelector('#addReviewForm');
+
+    //add event listeners for rating stars
+    stars[0].clicked = true;
+    const makeHoverStarsYellow = (limit) => {
+      for(let j=0; j<=limit; j++){
+          stars[j].style.color = "yellow";
+      }
+    };
+
+    const makeNotClickedStarsGray = (i) => {
+      for(let j=0; j<=i; j++){
+           if(!stars[j].clicked)
+             stars[j].style.color = "gray";
+         }
+     };
+       
+     const makeClickedStarsYellow = (i) => {
+       rateValue.value = i+1;
+         rateValue.innerHTML = i+1;
+         for(let j=0; j<=i; j++){
+           stars[j].style.color = "yellow";
+           stars[j].clicked = true;
+         }
+         if(i != stars.length-1)
+           for(let z=i+1; z<stars.length; z++){
+             stars[z].style.color = "gray";
+             stars[z].clicked = false;
+           }
+     };
+
+    for(let i=0; i<stars.length; i++){
+      stars[i].addEventListener('mouseover', (event) => {
+        event = makeHoverStarsYellow(i);
+      });
+      
+      stars[i].addEventListener('mouseleave', (event) => {
+        event = makeNotClickedStarsGray(i);
+      });
+
+      stars[i].addEventListener('click', (event) => {
+        event = makeClickedStarsYellow(i);
+      });
+
+    }
+
+    //on update button click display update form and fill it with existing values of the review coresponding to the authenticated user
+    if(displayUpdateForm)
+    displayUpdateForm.addEventListener("click", () => {
+      const updateReviewForm = document.querySelector('#updateReviewForm');
+      const reviewText = document.querySelector('#reviewTextHidden');
+      const reviewTextInput = updateReviewForm.querySelector('#updateReviewText');
+      const updateRating = updateReviewForm.querySelectorAll('.rating')[0].querySelectorAll('button');
+      const updateRate = updateReviewForm.getElementsByClassName("rate")[0];
+      const formRate = updateReviewForm.querySelector('#updateRateValue');
+
+      myReview.style.display = "none";
+      updateReviewForm.style.display = "block";
+      displayUpdateForm.style.display = "none";
+
+      formRate.value = updateRate.value;
+      reviewTextInput.textContent = reviewText.value;
+
+      for(let i=0; i<updateRate.value; i++){
+        updateRating[i].style.color = "yellow";
+      }
+    
+    });
+
+    //don't display add review form if review already exists for authenticated user
+    if(reviewExists)
+    {
+      addReviewForm.style.display = 'none';
+    }
+  }
+  
+  
+  const generateStarsContainers = document.getElementsByClassName('ratings-generated');
+
+  //generate stars for reviews rating after rate value
+ 
+    for(let container of generateStarsContainers){
+      const rateHidden = container.previousElementSibling;
+
+
+      for(let i=0; i<rateHidden.value; i++){
+        let star = document.createElement("button");
+        star.textContent = '★';
+        star.classList.add('star');
+        star.style.color = "yellow";
+        container.appendChild(star);
+   
+       }
+   
+       for(let i=0; i<5-rateHidden.value; i++){
+         let star = document.createElement("button");
+         star.textContent = '★';
+         star.classList.add('star');
+         container.appendChild(star);
+    
+        }
+    } 
+
+}
+
