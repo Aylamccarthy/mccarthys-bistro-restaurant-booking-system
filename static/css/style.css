@@ -79,7 +79,7 @@ main {
 
 .scroll {
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 /* ----------------------GENERAL STYLES----------------------------- */
@@ -504,8 +504,7 @@ main {
 
 }
 .profile-page{
-    background-image: 
-    
+    background-image:   
 }
 
 /* ----------------------BOOKINGS PAGE------------------------------*/
@@ -531,6 +530,50 @@ main {
 }
 
 /*-----------REVIEWS PAGE-----------------*/
+.review-page{
+    background-color: #482b1d;
+}
+.rating{
+    font-size: x-large;
+    margin-bottom: 15px;
+}
+
+.rating button:nth-child(1){
+    color: yellow;
+}
+
+.ratings-generated{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.star{
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: x-large;
+    padding: 0px;
+    transition: color 0.1s ease-in-out;
+}
+
+.review img{
+    height: 12vh;
+}
+
+.review h6{
+    text-transform: uppercase;
+}
+.review p{
+    text-align: justify;
+}
+
+.reviews-container{
+    margin-bottom: 20px;
+}
+
+.review-header small{
+    color: #ddeda9;
+}
+
 
 /*------------ Bootstrap toast----------- */
 .toasts {
