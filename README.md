@@ -143,6 +143,54 @@ _**Manage Bookings** page gives access only to staff members and displays all th
 The Flowchart for my program was created using <b>LucidChart</b> and it visually represents how the system works.<br>
 [![N|Solid](static/mccarthysbistro/media/lucidflowchart.png)](static/mccarthysbistro/media/lucidflowchart.png)<br>
 
+### Skeleton<hr>
+**Wireframes**<br>
+The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool.
+
+Home Page
+
+![homepage-mobile](docs/img/wireframes/homepagewireframemobile.png)
+![homepage-desktop](docs/img/wireframes/homepagewireframedesktop.png)
+
+Menu Page
+
+![menu-page-mobile](docs/img/wireframes/menuwireframemobile.png)
+![menu-page-desktop](docs/img/wireframes/menuwireframedesktop.png)
+
+Bookings Page
+
+![bookings-page-mobile](docs/img/wireframes/bookingwireframedesktop.png)
+![bookings-desktop]()
+
+The final finished project has slight deviations from these initial wireframes made but due to time constraint I was not able to finish an updated wireframes that completely reflects the final project. But I will make sure to update this on future release. 
+
+
+**Database**<br>
+
+Project uses cloud-based PostgreSQL database provided by [ElephantSQL](https://www.elephantsql.com/) as a service. ElephantSQL is known for its ease of use, reliability, and is a popular choice for Django projects that requires PostgreSQL database. It offers web interface with console for SQL queries. Database URL including API key is stored as enviromental variable in heroku.
+<br>
+The diagram below was created before the actual development of the website which led to some changes to the attributes and tables for finding the most relevant and useful ones to be kept. Due to time constraint I was not able to make an updated version on time, but I will make sure to update this on future release.
+
+<summary>Initial Schema</summary>
+
+![erd](static/mccarthysbistro/media/mccarthysbistro_erd.jpeg)
+
+### Surface<hr>
+#### Color Scheme
+All the colors were selected using the hero image to generate color scheme using coolors (https://coolors.co/generate)
+
+![Colour Scheme](static/mccarthysbistro/media/mccarthysbistro_colorscheme.png)
+
+To make things easier, I created css root variables that I used throughout the project.
+
+![Colour Scheme-root-variables](static/mccarthysbistro/media/colors_root_variable.png)
+
+
+
+
+
+
+
 
 
 
