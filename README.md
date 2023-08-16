@@ -179,25 +179,39 @@ The diagram below was created before the actual development of the website which
 #### Color Scheme
 All the colors were selected using the hero image to generate color scheme using coolors (https://coolors.co/generate)
 
-![Colour Scheme](static/mccarthysbistro/media/mccarthysbistro_colorscheme.png)
+![Colour Scheme](static/mccarthysbistro/media/mccarthysbistro_colorscheme%20(1).png)
 
-To make things easier, I created css root variables that I used throughout the project.
+For consistency and convenience, I created css root variables that I used throughout the project.
 
 ![Colour Scheme-root-variables](static/mccarthysbistro/media/colors_root_variable.png)
 
+#### Fonts
+* The fonts I used for this site were imported from [Google Fonts](https://fonts.google.com/):<br>
+  I created css root variables using the fonts below that I used throughout the project.
+  <br>
+**Body:** *Roboto*<br>
+**Navbar:** *Lato, cursive*<br>
+**Slogan:** *Merriweather, cursive*<br>
 
+#### Visual Effects
+* **Box shadows** <br>
+Multiple box shadows were used for the cover, buttons and images. They were inspired from [css-box-shadow-examples]("https://getcssscan.com/css-box-shadow-examples")<br>
 
+* **Animation**<br>
+Some animations were used for creating a dynamic and attractive design and give users visual cues. 
+**Dropdown Arrow Animation** To prompt user to scroll down to see more content.<br>
+<details>
+<summary>View Moving arrows animation</summary>
 
+![arrow-aniamtion](static/mccarthysbistro/media/arrows-capture.gif) <br>
+</details>
 
-
-
-
-
-
-
-
-
-
+* **Hover effects**<br> 
+Multiple Hover effects are also used throughout the site.<br>
+ NavBar Elements Hover <br>
+ Buttons Hover<br>
+ Footer Elements Hover<br>
+ Back to top Button <br>
 
 
 ## Agile Methodology
@@ -227,6 +241,59 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 |   |Milestone 9: Staff/Admin Manage Bookings  | [#56](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/issues/56) [#55](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/issues/55)
 | Epic 4: PROJECT WRAP UP| Milestone 10: Comprehensive Testing and Code Validations| [#63](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/issues/63)
 |   |Milestone 11:Tidying up and Final Project Deployment| [#64](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/issues/64) 
+
+
+<details>
+<summary>View Sprints Details</summary>
+
+* **Sprint 1 - SETUP**<br>
+    -Setup Django<br>
+    -Deploy on heroku<br><br>
+* **Sprint 2 - CONTENT AND NAVIGATION**<br>
+    -Create a navigation menu<br>
+    -Add restaurant name, slogan and description<br>
+    -Choose colors, fonts and decorative images <br><br>
+   
+* **Sprint 3 - USER REGISTRATION/AUTENTHICATION**<br>
+    -Implement the *Register* page using the django-allauth module<br>
+    -Implement the *Login* page using django-allauth module<br>
+    -Implement *Logout* modal using django-allauth module<br><br>
+    
+* **Sprint 4 - BOOKING**<br>
+    -Create *Booking* page<br>
+    -Implement a feature to display available dates and times<br>
+    -Implement booking form validation<br><br>
+   
+* **Sprint 5 - USER PROFILE**<br>
+    -Create user *Profile* page<br>
+    -Implement *Upcoming bookings* section<br><br>
+    
+* **Sprint 6 - STAFF MANAGE BOOKINGS**<br>
+    -Create a *Manage Bookings* page to display all bookings<br>
+    -Implement filtering by date form<br>
+   
+* **Sprint 7 - REVIEWS**<br>
+    -Create a *Reviews* page to display all reviews<br>
+    -Implement form for adding and updating review<br>
+   
+* **Sprint 8 - MENU**<br>
+    -Create a *Menu* page to display menu details<br>
+    -Implement a feature for adding, updating or deleting menu for authenticated staff member<br>
+    
+* **Sprint 9 - CONTACT**<br>
+    -Create *Where to find us* page<br>
+    -Add timetable<br>
+    -Add location address and map<br>
+    -Add contact details<br>
+   
+* **Sprint 10 - TESTING, VALIDATION, FINAL DEPLOYMENT**<br>
+    - Complete thorough manual testing.
+    - Complete thorough validation
+    - Final deployment
+</details><br><br>
+
+
+
 
 
 
