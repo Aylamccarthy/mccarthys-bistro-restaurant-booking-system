@@ -15,7 +15,7 @@
  * [Overview](#overview)
   * [UX](#ux)
     + [Strategy](#strategy)
-    + [Scope](#scope-hr-)
+    + [Scope](#scope)
     + [Structure](#structure-hr-)
     + [Skeleton](#skeleton-hr-)
     + [Surface](#surface-hr-)
