@@ -589,36 +589,46 @@ Note: Repository was created using Code Institute template: [https://github.com/
 9. After build is done, you should be able to see the button with the link leading to deployed app. In my case [http://mccarthys-bistro.herokuapp.com/](https://mccarthys-bistro.herokuapp.com/).
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Credits
 - Daisy McGirr Django Project Youtube Tutorials (https://www.youtube.com/watch?v=cPfvhpdYaNY&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
-- <a href="https://www.freepik.com/free-photo/table-set-dinning-table_1241148.htm#query=bistro%20restaurant&position=7&from_view=keyword&track=ais">Image by topntp26</a> on 
-- © <a href='https://www.123rf.com/profile_virtosmedia'>virtosmedia</a>, <a href='https://www.123rf.com/free-images/'>123RF Free Images</a>
 - https://www.youtube.com/watch?v=Alua227cOmY Used for extending the User model by creating a Profile app
-- pexels.com
 - How to create the Profile app inspiration can be found here: (https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2)
 - Update and Delete User Profile Model taken and modified to suit the app needs, here: ( https://www.youtube.com/watch?v=F5kTZdi_c5k&t=151s)
 - I use this website to resize my images: (https://picresize.com/)
 - W3schools (https://www.w3schools.com/)
+
 ### Code
+
+- Bookings app inspiration taken and modified from here: (https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak)
 - Toasts code taken and modified from here: (https://www.w3schools.com/bootstrap4/bootstrap_toast.asp)<br>
 (https://getbootstrap.com/docs/4.3/components/toasts/)
-
-- https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
 - Resizing Images (https://www.w3schools.com/css/css3_object-fit.asp)
 - Inspiration for reviews app was taken from and modified from here: (https://github.com/Code-Institute-Solutions/PP4_masterclass/tree/main)
+- Black - Black is a PEP8 compliant opinionated formatter. Used to format code.
 
-Black - Black is a PEP 8 compliant opinionated formatter. Used to format code.
+## Media
+
+Images used on the project are taken from here:
+- pexels.com
+- <a href="https://www.freepik.com/free-photo/table-set-dinning-table_1241148.htm#query=bistro%20restaurant&position=7&from_view=keyword&track=ais">Image by topntp26</a> on 
+- © <a href='https://www.123rf.com/profile_virtosmedia'>virtosmedia</a>, <a href='https://www.123rf.com/free-images/'>123RF Free Images</a>
+
+## Learning resources
+
+- [Code Institute course and learning platform](https://codeinstitute.net/)
+- [The book "Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction To Programming"](https://nostarch.com/pythoncrashcourse2e)
+- [StackOverflow](https://stackoverflow.com/)
+- [W3Schools](https://www.w3schools.com/python/default.asp)
+- [Django](https://www.djangoproject.com/) - Django documentation.
+- [Bootstrap](https://blog.getbootstrap.com/2022/11/22/bootstrap-5-2-3/) - Bootstrap documentation.
+- Documentation of python modules and libraries used in the project.
+
+## Acknowledgements
+
+- My mentor Gareth McGirr for helpful feedback and guidance at all stages of the project.
+- Code Institute Slack Community for being invaluable knowledge base.
+
+## Disclaimer
+
+- McCarthy's Bistro Website was created for educational purpose only.
+

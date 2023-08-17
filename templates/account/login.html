@@ -8,7 +8,7 @@
 <div class="background-container">
   <div class="auth-form col-11 col-lg-4">
     <h3 class="decorated"><span>{% trans "Sign In" %}</span></h3>
-    <p>Dear customer, in order to <u>make a booking</u> or  <u>leave a review</u> , please login.</p>
+    <p>Dear customer, in order to <a class="authenticate-link" href="{% url 'createbooking' %}"><b><small>make a booking</small></b></a> or  <a class="authenticate-link" href="{% url 'reviews' %}"><b><small>leave a review</small></b></a> , please login.</p>
 
     <form class="login" method="POST" action="{% url 'account_login' %}">
       <div class="input-container">
