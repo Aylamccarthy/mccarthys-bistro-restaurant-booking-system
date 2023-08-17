@@ -248,6 +248,7 @@ All the user stories were tested manually, that including all the representative
 ### HTML
 
 The html code of the website was validated using [W3 Markup Validator](https://validator.w3.org/).<br>
+For pages that require authentication I used "validate by direct input" method with source code.<br>
 At the time of deployment the validation have the following outcome:<br><br>
 
 ![html-validation](docs/img/validations/pp4_html_validation.png)
@@ -262,4 +263,20 @@ The following pages have been tested by direct input:
 * Manage bookings
 * Login/Register
 * 403/404/500 custom pages
+
+### CSS
+
+The CSS code was validated using [W3 Jigsaw Validator](https://jigsaw.w3.org/css-validator/)<br>
+At the time of deployment the validation for *style.css* has the following outcome:<br><br>
+
+
+![css-validation](docs/img/validations/pp4_css_validation.png)
+
+### Javascript
+
+The Javascript code was validated using using [JsHint](https://jshint.com/)<br>
+At the time of deployment the validation for *script.js* has the following outcome:<br><br>
+
+![jshint-validation](docs/img/validations/pp4_css_validation.png)
+
 
