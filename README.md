@@ -355,6 +355,12 @@ Authenticated staff user can have access to all the bookings and can add, update
 #### Reviews
 * On the *Reviews page* there is a list of all the reviews posted on the website and it is visible to all types of users. All the reviews have the same design and type of content. Important details are displayed such as *Name*, *Date and time*, *Stars rating* and the *Message* posted.<br>
 
+### Footer
+
+The footer consists of copyright info and quick navigation to social media links with icons, allowing guests to connect with the brand on popular social media platforms.
+<br><br>
+![footer](static/mccarthysbistro/media/mccarthys_footer.png)<br>
+
 ### Future Feature Considerations<hr>
 
 * Updating the booking feature with a more complex algorithm and design for generating available tables. 
@@ -418,14 +424,175 @@ The project design has been adapted to all types of devices using Bootstrap pred
 [Cloudinary](https://cloudinary.com/) - for storing static data<br>
 LightHouse - for testing performance<br>
 
+### Python packages
+
+* django 
+* gunicorn 
+* dj-database-url
+* psycopg2
+* dj3-cloudinary-storage 
+* pylint-django 
+* whitenoise
+* jinja2 
+* django-allauth
+* django-crispy-forms 
+* django-filter
+* pylint 
+* dateutils 
+* black
+
+## Testing
+The testing documentation can be found at [TESTING.MD](TESTING.MD)
+
+## Deployment
+
+The app was deployed to heroku for the first time as soon as  django 
+installation was completed to make sure that everything is working correctly.
+
+## Database (ElephangSQL)
+
+1. Navitate to [ElephantSQL website](https://www.elephantsql.com/), log in to your account
+2. In top-right corner click on green button "Create New Instance".
+3. Enter database name, leave plan field as is, optionaly enter tags.
+4. Select region, click on "Review" and then on "Create instance".
+5. Go to your dashboard, find newly created database instance, click on it.
+6. Copy URL starting with "postgress://"
+7. Paste this URL into env.py file as DATABASE_URL value and save the file.
+
+  ```python
+  os.environ["DATABASE_URL"] = "postgres://yourLinkFromDatabaseDashboard"
+  ```
+
+## Cloudinary
+
+1. Navigate to [https://cloudinary.com/](https://cloudinary.com/) and log in to your account.
+2. Navigate to dashboard/console [https://console.cloudinary.com/console/](https://console.cloudinary.com/console/) and copy API Enviroment variable starting with "cloudinary://".
+3. Paste copied url into env.py file as CLOUDINARY_URL value and save the file.
+
+```python
+os.environ["CLOUDINARY_URL"] = "cloudinary://yourLinkFromCloudinaryDashboard"
+```
+
+## Django secret key
+
+In order to protect django app secret key it was set as anviroment variable and stored in env.py. Please change your password accordingly.
+
+```python
+os.environ["SECRET_KEY"] = "yourSecretKey"
+```
+
+## GitHub and Gitpod
+
+Note: Repository was created using Code Institute template: [https://github.com/Code-Institute-Org/gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+1. Login to Github and navigate to repository: [https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system)
+
+2. Click on "Fork button" in upper-right corner and create a new form in your own account.
+
+3. Open your repository in local IDE or using Gitpod. Preferred way is to used [Chrome Gitpod Extension](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki). When you install extension, green "Gitpod" button appears in your repository. Click on it to cread new workspace.
+
+4. Go to workspace terminal and install all requirements using command: "pip install -r requirements.txt". All te packages will be installed. requirements.txt content:
+
+    ```python
+    asgiref==3.6.0
+    cloudinary==1.32.0
+    crispy-bootstrap5==0.7
+    dj-database-url==0.5.0
+    dj3-cloudinary-storage==0.0.6
+    Django==3.2.18
+    django-allauth==0.52.0
+    django-crispy-forms==2.0
+    django-social-share==2.3.0
+    django-summernote==0.8.20.0
+    django-taggit==3.1.0
+    gunicorn==20.1.0
+    oauthlib==3.2.2
+    psycopg2==2.9.5
+    PyJWT==2.6.0
+    python3-openid==3.2.0
+    pytz==2022.7.1
+    requests-oauthlib==1.3.1
+    sqlparse==0.4.3
+    ```
+
+5. Local env.py file should be configured as on example below:
+
+    ```python
+    import os
+
+    # Env vars
+    os.environ["DATABASE_URL"] = "postgres://yourLinkCopiedFromElephantSQLDashboard"
+    os.environ["SECRET_KEY"] = "YourSecretKey"
+    os.environ["CLOUDINARY_URL"] = "cloudinary://yourLinkCopiedFromCloudinaryDashboard"
+
+
+6. In order to save django changes in database migration needs to be made.
+
+7. Use terminal commands:
+
+    ```text
+    python3 manage.py makemigrations --dry-run
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    ```
+
+8. Create superuser to access admin area using terminal command (email is optional, password won't be visible when typing, confirm password twice):
+
+    ```text
+    python3 manage.py createsuperuser
+    ```
+
+9. App can be run in gitpod enviroment using terminal command:
+
+    ```text
+    python3 manage.py runserver
+    ```
+
+10. Go to Heroku and follow further instructions below.
+
+
+### Deploy on Heroku
+
+## Heroku
+
+1. Navigate to [https://heroku.com/](https://heroku.com/) login to your account and open dashboard. Click button "New" and select "Create new app" button.
+
+2. Enter app name, I used "mccarthys-bistro", chose your region and click on "Create app" button.
+
+3. Click on newly created app and go to "Deploy" tab and then to "Deployment method" section. Authorize and connect your GitHub account, then find and select your repository.
+
+4. Go to the "Settings" tab, click on "Reveal Config Vars" and add the following keys and values (all values should be strings without any quotation marks):
+
+    NOTE: DISABLE_COLLECTSTATIC variable should be set to "1" for initial deployment. Before final deployment it should be removed.
+
+    | Key                    | Value                                                            |
+    |------------------------|------------------------------------------------------------------|
+    | CLOUDINARY_URL         | cloudinary url beginning with cloudinary://                      |
+    | DATABASE_URL           | postgress url beginning with postgress://                        |
+    | DISABLE_COLLECTSTATIC  | 1                                                                |
+    | PORT                   | 8000                                                             |
+    | SECRET_KEY             | YourSecretKey, the same as in env.py                             |
+
+
+5. Return to your Gitpod workspace and navigate to the file `mccarthysbistro.settings.py`. Change allowed hosts including the name of the app that you created in previous steps. In my case, it was 'mccarthys-bistro.herokuapp.com'. Save the file.
+
+6. Procfile required to run project on Heroku was already created but if you change your app's name please make sure that this change is reflected in Procfile. It can be found in your project's main directory. In my case Procfile looks as below:
+
+    ```python
+    web: gunicorn mccarthysbistro.wsgi
+    ```
+
+7. After adding enviromental variables and editing Procfile project is ready for deployment. In Heroku app's dashboard navigate to "Deploy" tab, scroll down to "Manual deploy" section. Select main branch from dropdown menu and click on "Deploy Branch".
+
+8. **Step required for final deployment:** Navigate again to app's settings, reveal config vars and delete DISABLE_COLLECTSTATIC entry if it was set before.
+
+9. After build is done, you should be able to see the button with the link leading to deployed app. In my case [http://mccarthys-bistro.herokuapp.com/](https://mccarthys-bistro.herokuapp.com/).
 
 
 
-### Footer
 
-The footer consists of copyright info and quick navigation to social media links with icons, allowing guests to connect with the brand on popular social media platforms.
-<br><br>
-![footer](static/mccarthysbistro/media/mccarthys_footer.png)<br>
+
+
 
 
 
