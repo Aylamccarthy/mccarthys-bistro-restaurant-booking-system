@@ -43,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
 //-----Initialize toast------//
-$('.toast').toast(option)
+$(document).ready(function(){
+$('.toast').toast('show');
+});
 
 //-------Review Page--------//
 if (window.location.pathname.includes('/reviews/')) {

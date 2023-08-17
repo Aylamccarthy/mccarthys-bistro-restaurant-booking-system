@@ -201,10 +201,10 @@ Multiple box shadows were used for the cover, buttons and images. They were insp
 Some animations were used for creating a dynamic and attractive design and give users visual cues. 
 **Dropdown Arrow Animation** To prompt user to scroll down to see more content.<br>
 <details>
-<summary>View Moving arrows animation</summary>
+  <summary>View Moving arrows animation</summary>
 
-![arrow-aniamtion](static/mccarthysbistro/media/arrows-capture.gif) <br>
-</details>
+  ![arrow-aniamtion](static/mccarthysbistro/media/arrows-capture.gif) <br>
+  </details>
 
 * **Hover effects**<br> 
 Multiple Hover effects are also used throughout the site.<br>
