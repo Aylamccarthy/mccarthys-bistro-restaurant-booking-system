@@ -139,7 +139,8 @@
 
         {% if messages %}
     <!-- messages -->
-    <div class="toasts">
+    <!-- https://getbootstrap.com/docs/4.3/components/toasts/ -->
+    <div class="toasts" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
         {% for message in messages %}
         {% include 'includes/toasts/toast.html' %}
         {% endfor %}
