@@ -187,7 +187,8 @@ For consistency and convenience, I created css root variables that I used throug
 
 #### Fonts
 * The fonts I used for this site were imported from [Google Fonts](https://fonts.google.com/):<br>
-  I created css root variables using the fonts below that I used throughout the project.
+The [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) font is the main font used throughout the whole website with Sans Serif as the fallback. Roboto is a clean, modern looking and well known font. It is sourced from Google fonts and it's linked to css document via @import method.
+  I created css root variables using the other fonts below that I used throughout the project.
   <br>
 **Body:** *Roboto*<br>
 **Navbar:** *Lato, cursive*<br>
@@ -292,6 +293,23 @@ By using agile methodology, I was able to stay organized and focused on deliveri
     - Final deployment
 </details><br><br>
 
+## Features
+### Existing Features<hr>
+
+### Navbar and main menu
+
+Bootstrap navbar component was used to create the navigation bar. It is always visible and stays fixed at the top of the screen. Navbar consists of Restaurant logo and links to main areas of the site (home, menu, contact pages, Login and Register). 
+
+![navbar-1](static/mccarthysbistro/media/navbar1.png)<br><br>
+'Logout', 'Profile', 'Bookings and 'Make a Booking' buttons(displayed to unauthenticated users) are also present.<br><br>
+![navbar-2](static/mccarthysbistro/media/navbar2.png)<br>
+
+### Footer
+
+The footer consists of copyright info and quick navigation to social media links with icons, allowing guests to connect with the brand on popular social media platforms.
+<br><br>
+![footer](static/mccarthysbistro/media/mccarthys_footer.png)<br>
+
 
 
 
@@ -312,7 +330,8 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 - I use this website to resize my images: (https://picresize.com/)
 - W3schools (https://www.w3schools.com/)
 ### Code
-- Toasts code taken and modified from here: (https://www.w3schools.com/bootstrap4/bootstrap_toast.asp)
+- Toasts code taken and modified from here: (https://www.w3schools.com/bootstrap4/bootstrap_toast.asp)<br>
+(https://getbootstrap.com/docs/4.3/components/toasts/)
 
 - https://github.com/jts272/hello-django#developmentproduction-environments (For setting Development/Production environments )
 - Resizing Images (https://www.w3schools.com/css/css3_object-fit.asp)
