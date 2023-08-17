@@ -244,3 +244,22 @@ All the user stories were tested manually, that including all the representative
 
 * Ensure the external links to social media present in the footer open up in new tabs.
 
+## Code Validation
+### HTML
+
+The html code of the website was validated using [W3 Markup Validator](https://validator.w3.org/).<br>
+At the time of deployment the validation have the following outcome:<br><br>
+
+![html-validation](docs/img/validations/pp4_html_validation.png)
+
+The following pages have been tested by direct input:
+* Home
+* Menu
+* Make a booking
+* Where to find us
+* Reviews
+* Profile
+* Manage bookings
+* Login/Register
+* 403/404/500 custom pages
+
