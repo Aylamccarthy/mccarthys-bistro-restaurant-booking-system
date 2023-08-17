@@ -341,6 +341,82 @@ Considering that the website is created for a restaurant, the profile of the use
 
 ![profile](static/mccarthysbistro/media/profile.png)
 
+#### Staff bookings management
+The staff account is created as follows:<br>
+* User can create an as normal.
+* The admin can then convert the status into 'staff'.
+Authenticated staff user can have access to all the bookings and can add, update and delete bookings.<br>
+* The bookings are displayed on a custom-designed table, with information such as booking reference, name, date, no.of guests and table number. The page renders by default booking reference number and date.<br>
+* A booking also has an edit and delete button that allows users to manage their bookings. <br>
+* A toast is also triggered after each functionality to give users feedback.
+
+![manage-bookings](static/mccarthysbistro/media/manage_bookings.png)
+
+#### Reviews
+* On the *Reviews page* there is a list of all the reviews posted on the website and it is visible to all types of users. All the reviews have the same design and type of content. Important details are displayed such as *Name*, *Date and time*, *Stars rating* and the *Message* posted.<br>
+
+### Future Feature Considerations<hr>
+
+* Updating the booking feature with a more complex algorithm and design for generating available tables. 
+
+* LOYALTY CARD SCHEME.Another possible feature would be the implementation of a *Reward system*. Every time a client leaves a good review, a discount would appear on his profile page to use on his next visit. Also, a user should be given the status of *Loyal customer* when he registers on a system every time he eats at McCarthy's Bistro if that happens regularly. Different discounts should apply to loyal customers in order to recompensate and encourage their habit. 
+
+## Responsive Layout and Design
+The project design has been adapted to all types of devices using Bootstrap predefined breakpoints. For intermediate devices where the design didn't fit accordingly, custom breakpoints were used.
+
+**Breakpoints:**
+
+    - max-width:280px
+    - max-width:768px
+    - max-width:992px
+    - max-width:1024px
+
+**Tested devices:**
+
+    - Moto G4 
+    - iPhone SE 
+    - iPhone XR 
+    - iPhone 11 
+    - iPhone 13
+    - iPhone 5/SE 
+    - iPhone 6/7/8 
+    - Ipad
+    - Ipad Air 
+    - Ipad Mini
+    - Ipad Pro 
+    - Pixel 5 
+    - Surface Duo 
+    - Surface Pro 7 
+    - Nest Hub 
+    - Nest Hub Max
+    - Samsung Galaxy S20 Ultra 
+    - Samsung Galaxy S8 
+    - Galaxy Note 2 
+    - Galaxy Tab S4
+    - Asus Vivobook
+
+## Tools Used
+
+[GitHub](https://github.com/) - used for hosting the source code of the program<br>
+[gitpod](https://gitpod.io/workspaces) - for writing and testing the code locally<br>
+[Heroku](https://dashboard.heroku.com/) - used for deploying the project<br>
+[Balsamiq](https://balsamiq.com/wireframes/) - for creating the wireframes<br>
+[LucidChart](https://www.lucidchart.com/) - used for creating the Flowchart and Database relational schema<br>
+[Favicon.io](https://favicon.io/) - used for generating the website favicon<br>
+[Diffchecker](https://www.diffchecker.com/) - used for comparing the code<br>
+[TinyPNG](https://tinypng.com/) - for compressing the images<br>
+[Grammarly](https://app.grammarly.com/) - for correcting text content<br>
+[Font Awesome](https://fontawesome.com/) - for creating atractive UX with icons<br>
+[Bootstrap5](https://getbootstrap.com/) - for adding predifined styled elements and creating responsiveness<br>
+[Google Fonts](https://fonts.google.com/) - for typography<br>
+[JsHint](https://jshint.com/) - used for validating the javascript code<br>
+[PEP8 Validator](http://pep8online.com/) - used for validating the python code<br>
+[HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - used for validating the HTML<br>
+[CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - used for validating the CSS<br>
+[Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - for debugging the project<br>
+[W.A.V.E.](https://wave.webaim.org/) - for testing accessibility<br>
+[Cloudinary](https://cloudinary.com/) - for storing static data<br>
+LightHouse - for testing performance<br>
 
 
 
