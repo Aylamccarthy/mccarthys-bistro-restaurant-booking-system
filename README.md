@@ -245,7 +245,7 @@ By using agile methodology, I was able to stay organized and focused on deliveri
 
 
 <details>
-<summary>View Sprints Details</summary>
+<summary><strong>View Sprints Details</strong></summary>
 
 * **Sprint 1 - SETUP**<br>
     -Setup Django<br>
@@ -303,6 +303,47 @@ Bootstrap navbar component was used to create the navigation bar. It is always v
 ![navbar-1](static/mccarthysbistro/media/navbar1.png)<br><br>
 'Logout', 'Profile', 'Bookings and 'Make a Booking' buttons(displayed to unauthenticated users) are also present.<br><br>
 ![navbar-2](static/mccarthysbistro/media/navbar2.png)<br>
+
+### Home page
+
+User is welcomed with an image of one of the restaurant's favourite menu. And a clickable button link to register or login or a book a reservation if the user is authenticated. A scroll down arrow is present to prompt the user to scroll down the page to be greeted with a welcome message and information about the restaurant. And another image of the restaurant interior is present to entice the user even further. A back to top button is present at the bottom of the page to prompt the user to scroll back up. All these design were implemented aiming to meet the project goal of building a simple but intuitive and user friendly application.
+
+![homepage](static/mccarthysbistro/media/homepage_pp4.png)
+<br><br>
+
+#### Create bookings
+
+Every user that is authenticated can access the *Make aBooking* page for making a reservation. This feature provides a form with multiple input fields that appear successively, as steps in completing the booking.
+
+    The inputs are validated after the following rules:
+    * The Date value should not be less than the current day;
+    * Fields cannot be empty.
+    * User must choose from the time slots available;
+  
+  ![create-booking](static/mccarthysbistro/media/createbooking.png)
+  
+
+Upon succesful booking a toast confirming the rervation appears to give feedback to the user.
+
+  ![create-booking-success](static/mccarthysbistro/media/booking_confirmation.png)
+
+
+#### Menu 
+* On the *Menu* page there is a list with all the menu elements. Every item represents a meal with details such as *Name*, *Image*, *Price*, and Ingredients. The list design is simple and attractive.<br>
+
+* If the user is not authenticated, a short message including authentication links prompts the user to register/login if they have any dietary requirements requests (i.e. vegetarian, coeliac, lactose intolerant,etc.)
+
+![menu](static/mccarthysbistro/media/menu.png)
+
+#### Profiles
+The users' accounts have been created using the **django allauth** module. This way, information about the current user can be accessed from the template and displayed for confirming that the authentication was successful.<br>
+Considering that the website is created for a restaurant, the profile of the user is created to display essential information such as name and email.<br>
+
+![profile](static/mccarthysbistro/media/profile.png)
+
+
+
+
 
 ### Footer
 
