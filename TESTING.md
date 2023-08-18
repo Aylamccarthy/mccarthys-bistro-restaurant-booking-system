@@ -347,5 +347,68 @@ The accesibility of the website was tested with [Wave](https://wave.webaim.org/)
 ![wave-500](docs/img/validations/wave_500.png)<br><br>
 </details>
 
+### Performance
+The performance of the website was tested with Lighthouse
+
+**Lighthouse reports:**<br>
+
+<details>
+<summary>Desktop</summary>
+
+* Home page<br>
+![lighthouse-home](docs/img/validations/lighthouse_home_desktop.png)<br>
+
+* Menu page<br>
+![lighthouse-menu](docs/img/validations/lighthouse_menu_desktop.png)<br>
+
+* Contact page<br>
+![lighthouse-contact](docs/img/validations/lighthouse-contact_desktop.png)<br>
+
+* Bookings page<br>
+![lighthouse-bookings](docs/img/validations/lighthouse_createbooking_desktop.png)<br>
+
+* Manage Bookings page<br>
+![lighthouse-manage-bookings](docs/img/validations/lighthouse_managebooking_desktop.png)<br>
+
+* Profile page<br>
+![lighthouse-profile](docs/img/validations/lighthouse_profile-desktop.png)<br>
+
+* Register page<br>
+![lighthouse-register](docs/img/validations/lighthouse_register_desktop.png)<br>
+
+* Login page<br>
+![lighthouse-profile](docs/img/validations/lighthouse_login_desktop.png)<br>
+
+</details>
+
+<details>
+<summary>Mobile</summary>
+
+* Home page<br>
+![lighthouse-home](docs/img/validations/lighthouse_home_mobile.png)<br>
+
+* Menu page<br>
+![lighthouse-menu](docs/img/validations/lighthouse_home_mobile.png)<br>
+
+* Contact page<br>
+![lighthouse-contact](docs/img/validations/lighthouse_contact_mobile.png)<br>
+
+* Bookings page<br>
+![lighthouse-bookings](docs/img/validations/lighthouse_createbooking_mobile.png)<br>
+
+* Manage Bookings page<br>
+![lighthouse-manage-bookings](docs/img/validations/lighthouse_managebooking_mobile.png)<br>
+
+* Profile page<br>
+![lighthouse-profile](docs/img/validations/lighthouse_profile-desktop.png)<br>
+
+* Register page<br>
+![lighthouse-register](docs/img/validations/lighthouse_register_mobile.png)<br>
+
+* Login page<br>
+![lighthouse-profile](docs/img/validations/lighthouse_login_mobile.png)<br>
+</details>
+
+
 
 
