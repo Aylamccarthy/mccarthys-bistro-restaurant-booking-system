@@ -406,6 +406,7 @@ main {
     border-radius: 50%;
     width: auto;
     border: 2px solid antiquewhite;
+    color: #000;
 
 }
 
@@ -423,17 +424,17 @@ main {
 }
 
 .btn-simple:hover {
-    background-color:var(--green);
+    background-color:var(--black);
 
     border: 4px var(--orange);
     color: rgb(249, 212, 163);
 }
 
 .btn-simple:focus {
-    background-color:var(--gray);
+    background-color:var(--black);
 
     border: 2px solid antiquewhite;
-    color: antiquewhite;
+    color: white;
 }
 
 
