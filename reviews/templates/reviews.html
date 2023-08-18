@@ -1,9 +1,9 @@
 {% extends "base.html" %} 
 {% load static %} 
 {% block content %}
-<div class="row content col-10 col-lg-9 review-page">
-    <div class="center-container min-h-100">
-        <div class="center-container">
+<div class="background-container">
+    <div class="center-container p-4">
+        <div class="flex f-column a-center">
             <h2>Reviews <i class="far fa-comment-alt"></i></h2>
             <div class="flex sp-between reviews-main-container">
                 <div class="col-lg-7 reviews-container">
@@ -18,14 +18,14 @@
                                 <div class="col-10" >
                                     
                                     <div class="flex sp-between review-header">
-                                        <h6><b>{{ user.get_full_name }}</b></h6>
+                                        <h6><b>{{ review.author }}</b></h6>
                                         <div class="flex sp-between">
-                                            <small>{{ review.date_updated_on }}</small>
+                                            {{ review.date_updated_on }}
                                             <input type="hidden" name="rate" class="rate" value="{{review.rate}}">
                                             <div class="ratings-generated flex a-end "></div>
                                         </div>    
                                     </div>
-                                    <div class="row">
+                                    <div class="row sp-between">
                                         <p class="flex a-start"><q>{{ review.review_text}}</q></p>
                                     </div>
                                     
