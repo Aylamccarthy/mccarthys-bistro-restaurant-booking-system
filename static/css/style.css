@@ -242,16 +242,11 @@ main {
     position: relative;
 }
 
-.content-wrapper{
-    background-color: var(--background);
-
-}
 /* ----------------------Button in Home Page Link to Booking Page----------------------------- */
 .book-btn{
     margin: 0 auto;
     background-color: var(--green);
     padding: 8px;
-    
     width: 200px;
     font-weight: bold;
     text-transform: uppercase;
@@ -406,7 +401,7 @@ main {
     border-radius: 50%;
     width: auto;
     border: 2px solid antiquewhite;
-    color: #000;
+
 
 }
 
@@ -431,7 +426,7 @@ main {
 }
 
 .btn-simple:focus {
-    background-color:var(--black);
+    background-color:var(--orange);
 
     border: 2px solid antiquewhite;
     color: white;
