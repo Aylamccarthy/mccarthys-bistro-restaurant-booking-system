@@ -6,6 +6,7 @@ Back to [README.md](README.md)<br>
 * [User Story and Feature Testing](#user-story-and-feature-testing)
 * [Automated View Testing](#automated-view-testing)
 * [Browser Testing](#browser-testing)
+* [Functionality Testing](#functionality-testing)
 * [Code Validation](#code-validation)
 * [Bugs](#bugs)
 
@@ -244,6 +245,48 @@ All the user stories were tested manually, that including all the representative
 
 * Ensure the external links to social media present in the footer open up in new tabs.
 
+## Functionality testing
+
+Comprehensive testing has been conducted to ensure that all website functionalities are working as intended, providing users with a reliable and enjoyable browsing experience.
+
+| Functionality | What's being tested | Result |
+|------|-------------|--------|
+| Registration | A new user can create an account successfully. | Pass |
+|  | The website validates user inputs (2 password inputs match, email address is valid). | Pass |
+|  | The website displays an appropriate error message with hint when validation fails. | Pass |
+|  | The website displays an appropriate message if link is invalid or token expired | Pass |
+|  | User is signed in automatically when click confirm button | Pass |
+| Admin Panel | Admin can login to admin panel. | Pass |
+|  | Admin can add, edit and delete bookings. | Pass |
+|  | Admin can add edit and delete menu items. | Pass |
+|  | Admin can add and delete tables. | Pass |
+|  | Admin can delete users. | Pass|
+|  | Admin panel can not be accesed by regular user (unauthorized) | Pass |
+|  | Admin panel can be accessed by staff user| Pass |
+|Login | A registered user can log in successfully. | Pass |
+|  | The website displays an appropriate error message when a user enters an incorrect email or password. | Pass |
+|  | A logged-in user can sign out successfully. | Pass |
+|  | A logged-in user is asked for sign out confirmation.  | Pass |
+|  | Click on confirm modal sign out user.  | Pass |
+|Profile CRUD | Verify that a logged-in user can create and edit his profile. | Pass |
+|  | The website displays an appropriate error message when a user enters invalid data (e.g., date before current day, not allowed charset). | Pass |
+|  | A user can edit own profile and save or cancel changes | Pass |
+|  | A user cannot edit or delete another user's profile (check manual url change) | Pass |
+|  | Confirmation message is displayed when profile is updated | Pass |
+|  | Only authenticated users can edit their own profile | Pass |
+|Bookings CRUD | Verify that a logged-in user can create, edit delete his own bookings. | Pass |
+|  | Confirmation message is displayed when changes are saved | Pass |
+|  | User is asked for confirmation before deleting booking| Pass |
+|  | Click on delete confirmation button deletes bookings | Pass |
+|  | A user can delete own bookings | Pass |
+|  | Only authenticated users can book reservations | Pass |
+|  | Confirmation message is displayed when booking is updated or deleted | Pass |
+|Menu| A logged-in  staff user can add, edit or delete menu items. | Pass |
+|Reviews | All users can view all reviews| Fail |
+|  |Authenticated users can write reviews | Pass |
+|  |Unauthenticated users cannot write reviews | Pass |
+
+
 ## Code Validation
 ### HTML
 
@@ -261,8 +304,25 @@ The following pages have been tested by direct input:
 * Reviews
 * Profile
 * Manage bookings
-* Login/Register
+* Login/Register/Logout
 * 403/404/500 custom pages
+
+| Template | Validation Result |  Final validation
+|--------|-----------|---------|
+| index.html | no errors | pass|
+| menu.html | no errors | pass |
+| reviews.html | no errors | pass |
+| contact.html | no errors | pass
+| booking.html | no errors | pass
+| managebookings.html | no errors | pass ||
+| profile.html | no errors| pass
+| 404.html | no errors | pass |
+| 500.html | no errors | pass |
+| 403.html | no errors | pass |
+| signup.html | no errors | pass |
+| logout.html | no errors | pass |
+| login.html | no errors | pass |
+
 
 ### CSS
 
