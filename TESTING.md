@@ -469,6 +469,21 @@ The performance of the website was tested with Lighthouse
 ![lighthouse-profile](docs/img/validations/lighthouse_login_mobile.png)<br>
 </details>
 
+## Bugs 
+I encountered countless bugs during the whole process of building this project. Most of them I was able to fix on time, but unfortunately, due to time constraint the ones listed below are still yet to be fixed. And I will do my best to resolve them on future release.
+* **Default placeholder on name input in the booking form.**
+    When a user navigate to the bookings page, the booking form name input field has a default placeholder.
+    This is because I added this input field after my initial migration. Getting rid of it means emptying my database and doing another migration. 
+
+* **A user can still book even when the booking time is  before the current time.**
+
+* **The manage bookings page is not responsive on mobile devices.**
+
+* **The reviews are not showing on the reviews page.**
+
+
+    
+
 
 
 

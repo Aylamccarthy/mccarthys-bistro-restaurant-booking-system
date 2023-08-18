@@ -17,7 +17,6 @@
                                 </div>
                                 <div class="col-10" >
                                     {% for user in users %}
-                                    {% if user.email == review.author_id %}
                                     <div class="flex sp-between review-header">
                                         <h6><b>{{ user.get_full_name }}</b></h6>
                                         <div class="flex sp-between">
@@ -29,7 +28,6 @@
                                     <div class="row">
                                         <p class="flex a-start"><q>{{ review.review_text}}</q></p>
                                     </div>
-                                    {% endif %}
                                     {% endfor %}
                                 </div>
                             </div>

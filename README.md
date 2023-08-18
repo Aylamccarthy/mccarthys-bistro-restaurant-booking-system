@@ -589,6 +589,20 @@ Note: Repository was created using Code Institute template: [https://github.com/
 9. After build is done, you should be able to see the button with the link leading to deployed app. In my case [http://mccarthys-bistro.herokuapp.com/](https://mccarthys-bistro.herokuapp.com/).
 
 
+### Fork the repository
+For creating a copy of the repository on your account and change it without affecting the original project, use<b>Fork</b> directly from GitHub:
+- On [My Repository Page](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system), press <i>Fork</i> in the top right of the page
+- A forked version of my project will appear in your repository<br></br>
+
+### Clone the repository
+For creating a clone of the repository on your local machine, use<b>Clone</b>:
+- On [My Repository Page](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system), click the <i>Code</i> green button, right above the code window
+- Chose from <i>HTTPS, SSH and GitClub CLI</i> format and copy (preferably <i>HTTPS</i>)
+- In your <i>IDE</i> open <i>Git Bash</i>
+- Enter the command <code>git clone</code> followed by the copied URL
+- Your clone was created
+<hr>
+
 ## Credits
 - Daisy McGirr Django Project Youtube Tutorials (https://www.youtube.com/watch?v=cPfvhpdYaNY&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
 - https://www.youtube.com/watch?v=Alua227cOmY Used for extending the User model by creating a Profile app
