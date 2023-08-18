@@ -279,4 +279,73 @@ At the time of deployment the validation for *script.js* has the following outco
 
 ![jshint-validation](docs/img/validations/)
 
+### Accesibility 
+The accesibility of the website was tested with [Wave](https://wave.webaim.org/)
+
+**Wave results:**<br>
+
+<details>
+<summary>Home page</summary>
+
+![wave-validation](docs/img/validations/wave_homepage.png)<br><br>
+
+</details>
+
+<details>
+<summary>Menu page</summary>
+
+![wave-menu](docs/img/validations/wave_menupage.png)<br><br>
+
+</details>
+
+<details>
+<summary>Register page</summary>
+
+![wave-register](docs/img/validations/wave_registerpage.png)<br><br>
+</details>
+
+<details>
+<summary>login page</summary>
+
+![wave-login](docs/img/validations/wave_loginpage.png)<br><br>
+</details>
+
+<details>
+<summary>Contact page</summary>
+
+![wave-contact](docs/img/validations/wave_contactpage.png)<br><br>
+</details>
+
+<details>
+<summary>Bookings page</summary>
+
+![wave-create-booking](docs/img/validations/wave_createbooking.png)<br><br>
+</details>
+
+<details>
+<summary>Manage Bookings page</summary>
+
+![wave-manage-bookings](docs/img/validations/wave_booking.png)<br><br>
+</details>
+
+
+<details>
+<summary>403 Error  page</summary>
+
+![wave-403](docs/img/validations/wave_403.png)<br><br>
+</details>
+
+<details>
+<summary>404 Error  page</summary>
+
+![wave-404](docs/img/validations/wave_404.png)<br><br>
+</details>
+
+<details>
+<summary>500 Error  page</summary>
+
+![wave-500](docs/img/validations/wave_500.png)<br><br>
+</details>
+
+
 
