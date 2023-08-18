@@ -123,7 +123,7 @@ All the user stories were tested manually, that including all the representative
     -There is a *Profile* page that is visible only to authenticated users;<br>
     -The user is given the possibility of letting the restaurant know of any dietary requirements or food allergies by updating their profile information.
 
-        *By testing all these features, it can be affirmed that the user story is accomplished.*<br> 
+    *By testing all these features, it can be affirmed that the user story is accomplished.*<br> 
 * **Outcome:** Pass
 
 #### 5B: As a logged in user, I want to be able to edit or delete my bookings
@@ -277,6 +277,6 @@ At the time of deployment the validation for *style.css* has the following outco
 The Javascript code was validated using using [JsHint](https://jshint.com/)<br>
 At the time of deployment the validation for *script.js* has the following outcome:<br><br>
 
-![jshint-validation](docs/img/validations/pp4_css_validation.png)
+![jshint-validation](docs/img/validations/)
 
 
