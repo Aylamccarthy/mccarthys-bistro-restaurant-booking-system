@@ -442,7 +442,7 @@ LightHouse - for testing performance<br>
 * black
 
 ## Testing
-The testing documentation can be found at [TESTING.MD](TESTING.MD)
+The testing documentation can be found at [TESTING.md](TESTING.md)
 
 ## Deployment
 
