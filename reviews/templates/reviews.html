@@ -16,7 +16,7 @@
                                     <img src="{% static 'mccarthysbistro/media/user_profile_default_image.png' %}" alt="user icon">
                                 </div>
                                 <div class="col-10" >
-                                    {% for user in users %}
+                                    
                                     <div class="flex sp-between review-header">
                                         <h6><b>{{ user.get_full_name }}</b></h6>
                                         <div class="flex sp-between">
@@ -28,7 +28,7 @@
                                     <div class="row">
                                         <p class="flex a-start"><q>{{ review.review_text}}</q></p>
                                     </div>
-                                    {% endfor %}
+                                    
                                 </div>
                             </div>
                             <br>
