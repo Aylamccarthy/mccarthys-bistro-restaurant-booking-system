@@ -380,7 +380,7 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 * **views.py**<br>
 ![pep8-validation](docs/img/validations/contact_views.py.png)
 </details>
-
+<details>
 <summary>Home Page</summary>
 
 * **admin.py**<br>
@@ -400,7 +400,7 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 * **views.py**<br>
 ![pep8-validation](docs/img/validations)
 </details>
-
+<details>
 <summary>Menu Page</summary>
 
 * **admin.py**<br>
@@ -416,7 +416,7 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 * **views.py**<br>
 ![pep8-validation](docs/img/validations/menu_views.py.png)
 </details>
-
+<details>
 <summary>Profiles Page</summary>
 
 * **admin.py**<br>
@@ -435,6 +435,7 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 ![pep8-validation](docs/img/validations/profiles-views.py.png)
 </details>
 
+<details>
 <summary>Reviews Page</summary>
 
 * **admin.py**<br>
