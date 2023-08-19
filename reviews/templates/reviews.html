@@ -1,10 +1,10 @@
 {% extends "base.html" %} 
 {% load static %} 
 {% block content %}
-<div class="background-container">
+<div class="background-container p-8 review-page">
     <div class="center-container p-4">
         <div class="flex f-column a-center">
-            <h2>Reviews <i class="far fa-comment-alt"></i></h2>
+            <h2><strong>Reviews <i class="far fa-comment-alt"></i></strong></h2>
             <div class="flex sp-between reviews-main-container">
                 <div class="col-lg-7 reviews-container">
                     {% if reviews %}
@@ -59,7 +59,7 @@
                     <div class="col-lg-4 flex f-column a-start review-form-container">
                         {% if reviews %}
                             {% for review in reviews %}
-                                {% if review.author_id == user.email %}
+                                {% if review.author == user.email %}
                                     <p id="reviewExists" hidden></p>
                                     <!-- Current user review container -->
                                     <div id="myReview">
@@ -89,7 +89,7 @@
                                                 <button type="button" class="star">★</button>
                                             </div>  
                                             <input type="hidden" id="reviewTextHidden" value="{{ review.review_text }}">
-                                            {{ update_review_form.as_p }}
+                                            {{ update_review_form|crispy}}
                                             <button type="submit" class="btn form-submit" >Submit</button>
                                         </form> 
                                     </div>  
@@ -108,7 +108,7 @@
                                     <button type="button" class="star">★</button>
                                     <button type="button" class="star">★</button>
                                 </div>  
-                                {{ review_form.as_p }} 
+                                {{ review_form|crispy }} 
                                 <button type="submit" class="btn form-submit" >Submit</button>
                             </form> 
                         </div>              
