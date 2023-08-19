@@ -3,7 +3,7 @@
 {% block content %}
 <div class="background-container p-8 review-page">
     <div class="center-container p-4">
-        <div class="flex f-column a-center">
+        <div class="flex f-column a-center review-content-container">
             <h2><strong>Reviews <i class="far fa-comment-alt"></i></strong></h2>
             <div class="flex sp-between reviews-main-container">
                 <div class="col-lg-7 reviews-container">
@@ -12,7 +12,7 @@
                         <!-- Review container -->
                             <div class="row flex review">
                                 <!-- Default image -->
-                                <div class="col-2">
+                                <div style="padding: 10px" class="col-2">
                                     <img src="{% static 'mccarthysbistro/media/user_profile_default_image.png' %}" alt="user icon">
                                 </div>
                                 <div class="col-10" >
@@ -59,7 +59,7 @@
                     <div class="col-lg-4 flex f-column a-start review-form-container">
                         {% if reviews %}
                             {% for review in reviews %}
-                                {% if review.author == user.email %}
+                                {% if user.is_authenticated and user == review.author %}
                                     <p id="reviewExists" hidden></p>
                                     <!-- Current user review container -->
                                     <div id="myReview">
@@ -68,7 +68,7 @@
                                                 <div class="flex sp-between">
                                                     <input type="hidden" name="rate" class="rate" value="{{review.rate}}">
                                                     <div class="ratings-generated flex a-end "></div>
-                                                    <small>{{ review.date_updated_on }}</small>
+                                                    {{ review.date_updated_on }}
                                                 </div>
                                             <p><q>{{ review.review_text }}</q></p>
                                         </div>

@@ -585,7 +585,11 @@ main {
    color: #ddeda9;
 
 }
-.review-page{background-color: burlywood;
+.review-page{
+    background-color: antiquewhite;
+}
+.reviews-content-container{
+    background-size: 50%;
 
 }
 

@@ -337,13 +337,17 @@ At the time of deployment the validation for *style.css* has the following outco
 The Javascript code was validated using using [JsHint](https://jshint.com/)<br>
 At the time of deployment the validation for *script.js* has the following outcome:<br><br>
 
-![jshint-validation](docs/img/validations/)
+![jshint-validation](docs/img/validations/jshint_validator.png)
+
+* The warnings appeared because of EventListeners added to elements in a loop.<br>
+I tried to solve the issue but no successful method has been found, so I chose to ignore the warning as it is not affecting the way my code works in any way.
+* The script for defining the google map present in the *Where to find us page* contains *google* and *map* variables that generate the errors in the linter. As this is a script taken from the [Google Developers Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map), I choose to ignore this issue as well as there is no fix found for it. 
 
 ### Python
 The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validator.<br>
 
 **Pep8 results:**<br>
-<details>
+
 <details>
 <summary>Main app</summary>
 
@@ -455,9 +459,6 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 </details>
 
 
-
-</details>
-
 ### Accesibility 
 The accesibility of the website was tested with [Wave](https://wave.webaim.org/)
 
@@ -543,6 +544,9 @@ The performance of the website was tested with Lighthouse
 * Contact page<br>
 ![lighthouse-contact](docs/img/validations/lighthouse-contact_desktop.png)<br>
 
+* Reviews page<br>
+![lighthouse-reviews](docs/img/validations/reviews_lighthouse_desktop.png)<br>
+
 * Bookings page<br>
 ![lighthouse-bookings](docs/img/validations/lighthouse_createbooking_desktop.png)<br>
 
@@ -571,6 +575,9 @@ The performance of the website was tested with Lighthouse
 
 * Contact page<br>
 ![lighthouse-contact](docs/img/validations/lighthouse_contact_mobile.png)<br>
+
+* Reviews page<br>
+![lighthouse-reviews](docs/img/validations/lighthouse_reviews_mobile.png)<br>
 
 * Bookings page<br>
 ![lighthouse-bookings](docs/img/validations/lighthouse_createbooking_mobile.png)<br>
