@@ -137,7 +137,8 @@ The structure of the website is divided into eight pages but with content depend
 -The **Booking** page is only available for logged-in users, both clients and staff members;<br>
 -**Where to find us** contains  relevant information visible to all users;<br>
 -**Profile** page is only visible for the logged-in clients and give them possibility to request for any dietary requirements by editing their profile information;<br>
-_**Manage Bookings** page gives access only to staff members and displays all the bookings registered, with date, time, and number of guests information.<br>
+-**Manage Bookings** page gives access only to staff members and displays all the bookings registered, with date, time, and number of guests information.<br>
+-**Reviews** page is accessible to all users. However, only athenticated users can post a review. A friendly message is present if user is not autenticated to register/login.<br>
 
 * FLOWCHARTS <br>
 The Flowchart for my program was created using <b>LucidChart</b> and it visually represents how the system works.<br>
@@ -160,9 +161,9 @@ Menu Page
 Bookings Page
 
 ![bookings-page-mobile](docs/img/wireframes/bookingwireframedesktop.png)
-![bookings-desktop]()
 
-The final finished project has slight deviations from these initial wireframes made but due to time constraint I was not able to finish an updated wireframes that completely reflects the final project. But I will make sure to update this on future release. 
+The wireframes above were created before the start of project building.
+The final finished project has significant deviations from these initial wireframes but due to time constraint I was not able to finish an updated wireframes that completely reflects the final project. But I will make sure to update this on future release. 
 
 
 **Database**<br>
@@ -221,7 +222,7 @@ This is the first time I used Agile methodology when planning full-stack django 
 
 As a student solo developer who was learning a lot during development, I faced challenges in estimating the time required for each task and only had a basic concept of what I would create. Therefore, I kept things simple and focused on achievable goals. Aiming for Minimum Viable Product, or MVP.
 
-To keep track of progress,Github Projects. I used a kanban board divided into following sections: "to do", "in progress" "done", "future enhancements" and "bugs" that allowed me to visualize all tasks and prioritize next steps. However, I could not find the "epics" feature in GitHub Projects, only milestones (it provides only [milestones and issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)). Epics are supposed to be larger in scope than milestones, representing a significant amount of work. Milestones, on the other hand, are meant to mark significant points in time in terms of project completion. In this document, I added epics, but on the project board, I used only [milestones](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/milestones) to stay in order with GitHub's features.
+To keep track of progress, I used Github Projects(https://github.com/users/Aylamccarthy/projects/3). I used a kanban board (https://github.com/users/Aylamccarthy/projects/3/views/1?layout=board) divided into following sections: "to do", "in progress" "done", "future enhancements" and "bugs" that allowed me to visualize all tasks and prioritize next steps. However, I could not find the "epics" feature in GitHub Projects, only milestones (it provides only [milestones and issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)). Epics are supposed to be larger in scope than milestones, representing a significant amount of work. Milestones, on the other hand, are meant to mark significant points in time in terms of project completion. In this document, I added epics, but on the project board, I used only [milestones](https://github.com/Aylamccarthy/mccarthys-bistro-restaurant-booking-system/milestones) to stay in order with GitHub's features.
 
 By using agile methodology, I was able to stay organized and focused on delivering the most important features, while also allowing flexibility for future development. This experience gave me valuable insight and lessons that I can apply to future projects.
 
@@ -315,10 +316,10 @@ User is welcomed with an image of one of the restaurant's favourite menu. And a 
 
 Every user that is authenticated can access the *Make aBooking* page for making a reservation. This feature provides a form with multiple input fields that appear successively, as steps in completing the booking.
 
-    The inputs are validated after the following rules:
-    * The Date value should not be less than the current day;
-    * Fields cannot be empty.
-    * User must choose from the time slots available;
+  The inputs are validated after the following rules:
+  - The Date value should not be less than the current day;
+  - Fields cannot be empty.
+  - User must choose from the time slots available;
   
   ![create-booking](static/mccarthysbistro/media/createbooking.png)
   
@@ -605,7 +606,7 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 
 ## Credits
 - Daisy McGirr Django Project Youtube Tutorials (https://www.youtube.com/watch?v=cPfvhpdYaNY&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
-- https://www.youtube.com/watch?v=Alua227cOmY Used for extending the User model by creating a Profile app
+- Tutorial used for extending the User model by creating a Profile app:https://www.youtube.com/watch?v=Alua227cOmY
 - How to create the Profile app inspiration can be found here: (https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2)
 - Update and Delete User Profile Model taken and modified to suit the app needs, here: ( https://www.youtube.com/watch?v=F5kTZdi_c5k&t=151s)
 - I use this website to resize my images: (https://picresize.com/)
@@ -613,6 +614,7 @@ For creating a clone of the repository on your local machine, use<b>Clone</b>:
 
 ### Code
 
+- Code Institute [Code Institute course and learning platform](https://codeinstitute.net/) specifically "I Think Therefore I Blog" and "To Do App"
 - Bookings app inspiration taken and modified from here: (https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak)
 - Toasts code taken and modified from here: (https://www.w3schools.com/bootstrap4/bootstrap_toast.asp)<br>
 (https://getbootstrap.com/docs/4.3/components/toasts/)

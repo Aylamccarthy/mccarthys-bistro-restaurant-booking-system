@@ -339,6 +339,34 @@ At the time of deployment the validation for *script.js* has the following outco
 
 ![jshint-validation](docs/img/validations/)
 
+### Python
+The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validator.<br>
+
+**Pep8 results:**<br>
+<details>
+<details>
+<summary>Main app</summary>
+
+* **settings.py**<br>
+![pep8-validation](docs/img/validations/main_settings.py.png)
+
+* **urls.py**<br>
+![pep8-validation](docs/img/validations/main_urls.py.png)
+</details>
+<details>
+<summary>Booking Page</summary>
+
+* **admin.py**<br>
+* **apps.py**<br>
+* **forms.py**<br>
+* **models.py**<br>
+* **urls.py**<br>
+* **views.py**<br>
+
+
+
+</details>
+
 ### Accesibility 
 The accesibility of the website was tested with [Wave](https://wave.webaim.org/)
 
@@ -487,3 +515,4 @@ I encountered countless bugs during the whole process of building this project. 
 
 
 
+Back to [README.md](README.md)<br>

@@ -25,7 +25,6 @@ def update_profile(request):
             return redirect("profile")
     else:
         form = ProfileForm(instance=profile)
-    
     # Add a "Cancel button that redirects to the profile view
     cancel_url = reverse("profile")
 
