@@ -357,11 +357,101 @@ The python code was tested using [PEP8ci](https://pep8ci.herokuapp.com/) validat
 <summary>Booking Page</summary>
 
 * **admin.py**<br>
-* **apps.py**<br>
+![pep8-validation](docs/img/validations/booking_admin.py.png)
+
 * **forms.py**<br>
+![pep8-validation](docs/img/validations/booking_forms.py.png)
+
 * **models.py**<br>
+![pep8-validation](docs/img/validations/bookings_models.py.png)
+
 * **urls.py**<br>
+![pep8-validation](docs/img/validations/bookings_urls.py.png)
+
 * **views.py**<br>
+![pep8-validation](docs/img/validations/bookings_views.py.png)
+</details>
+<details>
+<summary>Contact Page</summary>
+
+* **urls.py**<br>
+![pep8-validation](docs/img/validations/contact_urls.py.png)
+
+* **views.py**<br>
+![pep8-validation](docs/img/validations/contact_views.py.png)
+</details>
+
+<summary>Home Page</summary>
+
+* **admin.py**<br>
+![pep8-validation](docs/img/validations)
+* **apps.py**<br>
+
+![pep8-validation](docs/img/validations)
+* **forms.py**<br>
+![pep8-validation](docs/img/validations)
+
+* **models.py**<br>
+![pep8-validation](docs/img/validations/home)
+
+* **urls.py**<br>
+![pep8-validation](docs/img/validations)
+
+* **views.py**<br>
+![pep8-validation](docs/img/validations)
+</details>
+
+<summary>Menu Page</summary>
+
+* **admin.py**<br>
+![pep8-validation](docs/img/validations/menu_admin.py.png)
+
+
+* **forms.py**<br>
+![pep8-validation](docs/img/validations/menu_forms.py.png)
+
+* **models.py**<br>
+![pep8-validation](docs/img/validations/menu_models.py.png)
+
+* **views.py**<br>
+![pep8-validation](docs/img/validations/menu_views.py.png)
+</details>
+
+<summary>Profiles Page</summary>
+
+* **admin.py**<br>
+![pep8-validation](docs/img/validations/profiles_admin.py.png)
+
+* **forms.py**<br>
+![pep8-validation](docs/img/validations/profiles_forms.py.png)
+
+* **models.py**<br>
+![pep8-validation](docs/img/validations/profiles_models.py.png)
+
+* **urls.py**<br>
+![pep8-validation](docs/img/validations/profiles_urls.py.png)
+
+* **views.py**<br>
+![pep8-validation](docs/img/validations/profiles-views.py.png)
+</details>
+
+<summary>Reviews Page</summary>
+
+* **admin.py**<br>
+![pep8-validation](docs/img/validations/reviews_admin.py.png)
+
+* **forms.py**<br>
+![pep8-validation](docs/img/validations/reviews_forms.py.png)
+
+* **models.py**<br>
+![pep8-validation](docs/img/validations/reviews_models.py.png)
+
+* **urls.py**<br>
+![pep8-validation](docs/img/validations/reviews_urls.py.png)
+
+* **views.py**<br>
+![pep8-validation](docs/img/validations/reviews_views.py.png)
+</details>
 
 
 

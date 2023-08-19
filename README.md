@@ -316,7 +316,7 @@ User is welcomed with an image of one of the restaurant's favourite menu. And a 
 
 Every user that is authenticated can access the *Make aBooking* page for making a reservation. This feature provides a form with multiple input fields that appear successively, as steps in completing the booking.
 
-  The inputs are validated after the following rules:
+The inputs are validated after the following rules:
   - The Date value should not be less than the current day;
   - Fields cannot be empty.
   - User must choose from the time slots available;
