@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # Cross-reference this debug state to set development state
 # development = DEBUG
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mccarthys-bistro.herokuapp.com', 'localhost', '8000-aylamccarth-mccarthysbi-6imyleslrfc.ws-eu104.gitpod.io']
 

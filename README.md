@@ -336,6 +336,13 @@ Upon succesful booking a toast confirming the rervation appears to give feedback
 
 ![menu](static/mccarthysbistro/media/menu.png)
 
+-The **Reviews** page displays all existent reviews and the "Add/Update review" option only for logged-in users;<br>
+
+* If the user is not authenticated, a short message including authentication links prompts the user to register/login if they wish to add or edit their reviews.
+
+![reviews](static/mccarthysbistro/media/reviews_page.png)
+
+
 #### Profiles
 The users' accounts have been created using the **django allauth** module. This way, information about the current user can be accessed from the template and displayed for confirming that the authentication was successful.<br>
 Considering that the website is created for a restaurant, the profile of the user is created to display essential information such as name and email.<br>

@@ -492,9 +492,11 @@ The accesibility of the website was tested with [Wave](https://wave.webaim.org/)
 
 <details>
 <summary>Contact page</summary>
+The contact page result is showing one error about the map image missing alternative text. I tried to fix it but was unsuccessful.
 
 ![wave-contact](docs/img/validations/wave_contactpage.png)<br><br>
 </details>
+
 
 <details>
 <summary>Bookings page</summary>
@@ -602,15 +604,18 @@ I encountered countless bugs during the whole process of building this project. 
     This is because I added this input field after my initial migration. Getting rid of it means emptying my database and doing another migration. 
 
 * **A user can still book even when the booking time is  before the current time.**
+    It is still remains unsolved.
 
 * **The manage bookings page is not responsive on mobile devices.**
+    It is still remains unsolved.   
 
-* **The reviews are not showing on the reviews page.**
+* **The reviews page responsiveness can be significantly improve.**
+    - Due to time constraint, I did not manage to fix responsiveness issues on time.
+    - The update reviews button is not working as intended.
+
 
 
     
-
-
 
 
 Back to [README.md](README.md)<br>

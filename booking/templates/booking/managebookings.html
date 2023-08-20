@@ -58,7 +58,7 @@
     </div>
 </div>
 
-<div class="container m-3">
+<div class="container m-3 a-center">
     <!-- Search querys -->
     {% if request.user.is_staff %}
         <form method='GET' class="mb-3">
@@ -75,6 +75,7 @@
                 <i class="fas fa-search"></i>
             </button>
         </form>
+</div>
     {% endif %}
 
 {%endblock%}
