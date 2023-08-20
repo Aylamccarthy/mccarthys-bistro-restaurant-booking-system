@@ -375,6 +375,13 @@ The footer consists of copyright info and quick navigation to social media links
 
 * LOYALTY CARD SCHEME.Another possible feature would be the implementation of a *Reward system*. Every time a client leaves a good review, a discount would appear on his profile page to use on his next visit. Also, a user should be given the status of *Loyal customer* when he registers on a system every time he eats at McCarthy's Bistro if that happens regularly. Different discounts should apply to loyal customers in order to recompensate and encourage their habit. 
 
+* Create a contact form on the contact page to increase client engagement.
+
+* Add a gallery page to give clients an even better image of the restaurant.
+
+* Add an upload image field on the reviews form so that guests can add images they have taken while enjoying McCarthy's Bistro experience. This aims to hopefully encourage future visitors of the website that had not been to MCarthy's Bistro.
+
+
 ## Responsive Layout and Design
 The project design has been adapted to all types of devices using Bootstrap predefined breakpoints. For intermediate devices where the design didn't fit accordingly, custom breakpoints were used.
 
