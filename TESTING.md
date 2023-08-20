@@ -609,6 +609,15 @@ I encountered countless bugs during the whole process of building this project. 
 * **The manage bookings page is not responsive on mobile devices.**
     It is still remains unsolved.   
 
+* **The Menu page add to favorites buttons not working as intended.**
+    It is still remains unsolved.   
+
+* **The Menu page add to favorites buttons not working as intended.**
+    It is still remains unsolved.   
+
+* **The search query on manage bookings page not working as intended.**
+    It is still remains unsolved.   
+
 * **The reviews page responsiveness can be significantly improve.**
     - Due to time constraint, I did not manage to fix responsiveness issues on time.
     - The update reviews button is not working as intended.

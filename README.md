@@ -334,7 +334,7 @@ Upon succesful booking a toast confirming the rervation appears to give feedback
 
 * If the user is not authenticated, a short message including authentication links prompts the user to register/login if they have any dietary requirements requests (i.e. vegetarian, coeliac, lactose intolerant,etc.)
 
-![menu](static/mccarthysbistro/media/menu.png)
+![menu](static/mccarthysbistro/media/menu_page.png)
 
 -The **Reviews** page displays all existent reviews and the "Add/Update review" option only for logged-in users;<br>
 
